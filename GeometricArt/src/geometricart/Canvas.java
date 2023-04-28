@@ -176,13 +176,13 @@ public class Canvas extends javax.swing.JFrame implements ActionListener{
           case 0:
               
                    g.drawRect(shapes[i].getX(), shapes[i].getY(), shapes[i].getHeight(),shapes[i].getLenght());                  
-                System.out.println("height : "+shapes[i].getHeight() + "length : "+shapes[i].getLenght());
+                System.out.println(" square height : "+shapes[i].getHeight() + "square length : "+shapes[i].getLenght());
                 
                   
                    break;
           case 1:
               g.drawOval(shapes[i].getX(), shapes[i].getY(), shapes[i].getHeight(),shapes[i].getLenght());
-             System.out.println("height 1  "+ shapes[i].getHeight());
+             System.out.println("oval height 1  "+ shapes[i].getHeight());
               break;
               
               }
@@ -192,7 +192,7 @@ public class Canvas extends javax.swing.JFrame implements ActionListener{
           case 0:
               
                    g2.drawRect(second[i].getX(), second[i].getY(), second[i].getHeight(),second[i].getLenght());                  
-                System.out.println("height second shape : "+second[i].getHeight() + "length second shape : "+second[i].getLenght());
+                System.out.println("height second shape square : "+second[i].getHeight() + "length second shape square: "+second[i].getLenght());
                   
                    break;
           case 1:
@@ -225,19 +225,36 @@ public class Canvas extends javax.swing.JFrame implements ActionListener{
         // Print the attributes of each shape in each painting
        
         repaint();
-         if(shapes ==null && second ==null)
-           {
-               System.out.println("No paintings");
-           }
-           else
-           {
-               for (int j = 0; j < 6; j++) {
-          
-                System.out.println("Shape " + (j+1) + " - Height: " + shapes[j].getHeight() + ", Length: " + shapes[j].getLenght() );
-                 System.out.println("Shape " + (j+1) + " - Height: " + second[j].getHeight() + ", Length: " + second[j].getLenght() );
+        if( shapes==null)
+        {
+            System.out.println("Nu exista picturi ");
+        }
+        else
+        {
+            for(int i=0;i<10;i++)
+        {
+            shapes=paintings[i].getShapes();
+            for(int j=0;j<6;j++)
+            {
+                System.out.println("height of the shape "+i+":"+shapes[j].getHeight());
             }
-               
-           }
+        }
+        }
+        
+        
+//         if(shapes ==null && second ==null)
+//           {
+//               System.out.println("No paintings");
+//           }
+//           else
+//           {
+//               for (int j = 0; j < 6; j++) {
+//          
+//                System.out.println("Shape " + (j+1) + " - Height: " + shapes[j].getHeight() + ", Length: " + shapes[j].getLenght() );
+//                 System.out.println("Shape " + (j+1) + " - Height: " + second[j].getHeight() + ", Length: " + second[j].getLenght() );
+//            }
+//               
+//           }
        
     }//GEN-LAST:event_jButton2ActionPerformed
     
