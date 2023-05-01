@@ -6,6 +6,7 @@
 package geometricart;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -22,6 +23,7 @@ public class Canvas extends javax.swing.JFrame implements ActionListener{
      * Creates new form Canvas
      */
     public Canvas() {
+       
         initComponents();
     }
 
@@ -39,6 +41,11 @@ public class Canvas extends javax.swing.JFrame implements ActionListener{
         jButton2 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
+        jButton3 = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -48,7 +55,7 @@ public class Canvas extends javax.swing.JFrame implements ActionListener{
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 334, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -95,41 +102,126 @@ public class Canvas extends javax.swing.JFrame implements ActionListener{
             .addGap(0, 200, Short.MAX_VALUE)
         );
 
+        jButton3.setText("jButton3");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        jPanel4.setBackground(new java.awt.Color(204, 204, 255));
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 314, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 200, Short.MAX_VALUE)
+        );
+
+        jPanel5.setBackground(new java.awt.Color(204, 204, 255));
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        jPanel6.setBackground(new java.awt.Color(204, 204, 255));
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        jPanel7.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel7.setForeground(new java.awt.Color(204, 204, 255));
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 278, Short.MAX_VALUE)
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 218, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(17, 17, 17)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(36, 36, 36)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(346, Short.MAX_VALUE))
+                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(36, 36, 36)
+                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(9, 9, 9)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(82, 82, 82)
+                .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(jButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton2))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(31, 31, 31)
+                                .addComponent(jButton1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButton2)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton3))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(16, 16, 16)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(159, 159, 159)
+                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(107, Short.MAX_VALUE))
         );
 
         pack();
@@ -139,15 +231,25 @@ public class Canvas extends javax.swing.JFrame implements ActionListener{
       repaint();
     }
    Random random=new Random();
-    Painting painting ,secondshape;
-      Individual[] shapes,second;
+    Painting painting ,secondshape,thirdshape,forthsape,fifthshape,sixthshape;
+      Individual[] shapes,second,third,forth,fifth,sixth;
        Painting[] paintings;
+    Shape_method triangle=new Shape_method();
       int selector;
     static int k=0;
+    
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 //       painting = new Painting();
 //       shapes = painting.getShapes();
+
+Dimension size = jPanel7.getSize();
+int width = size.width;
+int height = size.height;
+System.out.println("Panel size is " + width + " x " + height);
+
+        Creation_of_the_individual c=new Creation_of_the_individual();
+       
        paintings= new Painting[10];
         for (int i = 0; i < 10; i++) {
             paintings[i] = new Painting();
@@ -156,6 +258,14 @@ public class Canvas extends javax.swing.JFrame implements ActionListener{
         shapes=painting.getShapes();
         secondshape=paintings[1];
         second=secondshape.getShapes();
+        thirdshape=paintings[2];
+        third=thirdshape.getShapes();
+        forthsape=paintings[3];
+        forth=forthsape.getShapes();
+        fifthshape=paintings[4];
+        fifth=fifthshape.getShapes();
+        sixthshape=paintings[5];
+        sixth=sixthshape.getShapes();
    k++;
       System.out.print(k);
      
@@ -164,14 +274,18 @@ public class Canvas extends javax.swing.JFrame implements ActionListener{
       Graphics g = jPanel1.getGraphics();
       Graphics g2 = jPanel2.getGraphics();
       Graphics g3 = jPanel3.getGraphics();
+      Graphics g4 = jPanel4.getGraphics();
+      Graphics g5 = jPanel5.getGraphics();
+      Graphics g6 = jPanel6.getGraphics();
+    
       
      
            for( i=0;i<6;i++)
         {
             
-       selector=random.nextInt(2);
+       selector=random.nextInt(3);
         
-      switch(selector)
+      switch(shapes[i].getSelector())
               {
           case 0:
               
@@ -184,10 +298,12 @@ public class Canvas extends javax.swing.JFrame implements ActionListener{
               g.drawOval(shapes[i].getX(), shapes[i].getY(), shapes[i].getHeight(),shapes[i].getLenght());
              System.out.println("oval height 1  "+ shapes[i].getHeight());
               break;
+          case 2:triangle.drawTraingle(g, shapes[i].getX(), shapes[i].getY(), shapes[i].getHeight(),shapes[i].getLenght());
               
               }
-   
-      switch(selector)
+      System.out.println("Selector: "+third[i].getSelector());
+    
+      switch(second[i].getSelector())
               {
           case 0:
               
@@ -199,9 +315,80 @@ public class Canvas extends javax.swing.JFrame implements ActionListener{
               g2.drawOval(second[i].getX(), second[i].getY(), second[i].getHeight(),second[i].getLenght());
              System.out.println("height second shape  "+ second[i].getHeight());
               break;
+           case 2:triangle.drawTraingle(g2, shapes[i].getX(), shapes[i].getY(), shapes[i].getHeight(),shapes[i].getLenght());
+
               
               }
-
+//       selector=random.nextInt(3);
+//      switch(selector)
+//              {
+//          case 0:
+//              
+//                   g3.drawRect(third[i].getX(), third[i].getY(), third[i].getHeight(),third[i].getLenght());                  
+//                System.out.println("height second shape square : "+third[i].getHeight() + "length second shape square: "+third[i].getLenght());
+//                  
+//                   break;
+//          case 1:
+//              g3.drawOval(third[i].getX(), third[i].getY(), third[i].getHeight(),third[i].getLenght());
+//             System.out.println("height second shape  "+ third[i].getHeight());
+//              break;
+//              
+//              
+//                     case 2:triangle.drawTraingle(g3, shapes[i].getX(), shapes[i].getY(), shapes[i].getHeight(),shapes[i].getLenght());
+//
+//              
+//              }
+//       selector=random.nextInt(3);
+//       switch(selector)
+//              {
+//          case 0:
+//              
+//                   g4.drawRect(forth[i].getX(), forth[i].getY(), forth[i].getHeight(),forth[i].getLenght());                  
+//                System.out.println("height second shape square : "+forth[i].getHeight() + "length second shape square: "+forth[i].getLenght());
+//                  
+//                   break;
+//          case 1:
+//              g4.drawOval(forth[i].getX(), forth[i].getY(), forth[i].getHeight(),forth[i].getLenght());
+//             System.out.println("height second shape  "+ forth[i].getHeight());
+//              break;
+//                        case 2:triangle.drawTraingle(g4, shapes[i].getX(), shapes[i].getY(), shapes[i].getHeight(),shapes[i].getLenght());
+//
+//              
+//              }
+//        selector=random.nextInt(3);
+//switch(selector)
+//              {
+//          case 0:
+//              
+//                   g5.drawRect(fifth[i].getX(), fifth[i].getY(), fifth[i].getHeight(),fifth[i].getLenght());                  
+//                System.out.println("height second shape square : "+fifth[i].getHeight() + "length second shape square: "+fifth[i].getLenght());
+//                  
+//                   break;
+//          case 1:
+//              g5.drawOval(fifth[i].getX(), fifth[i].getY(), fifth[i].getHeight(),fifth[i].getLenght());
+//             System.out.println("height second shape  "+ fifth[i].getHeight());
+//              break;
+//                        case 2:triangle.drawTraingle(g5, shapes[i].getX(), shapes[i].getY(), shapes[i].getHeight(),shapes[i].getLenght());
+//
+//              
+//              }
+// selector=random.nextInt(3);
+//switch(selector)
+//              {
+//          case 0:
+//              
+//                   g6.drawRect(sixth[i].getX(), sixth[i].getY(), sixth[i].getHeight(),sixth[i].getLenght());                  
+//                System.out.println("height second shape square : "+sixth[i].getHeight() + "length second shape square: "+fifth[i].getLenght());
+//                  
+//                   break;
+//          case 1:
+//              g6.drawOval(sixth[i].getX(), sixth[i].getY(), sixth[i].getHeight(),sixth[i].getLenght());
+//             System.out.println("height second shape  "+ sixth[i].getHeight());
+//              break;
+//                        case 2:triangle.drawTraingle(g6, shapes[i].getX(), shapes[i].getY(), shapes[i].getHeight(),shapes[i].getLenght());
+//
+//              
+//              }
   
       }
       
@@ -209,7 +396,7 @@ public class Canvas extends javax.swing.JFrame implements ActionListener{
        
         
        
-        
+  
         
                         
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -232,11 +419,16 @@ public class Canvas extends javax.swing.JFrame implements ActionListener{
         else
         {
             for(int i=0;i<10;i++)
+                
         {
+            System.out.println("Shape "+i);
             shapes=paintings[i].getShapes();
+            
+            
             for(int j=0;j<6;j++)
             {
                 System.out.println("height of the shape "+i+":"+shapes[j].getHeight());
+                System.out.println("Selector"+third[j].getSelector());
             }
         }
         }
@@ -257,6 +449,48 @@ public class Canvas extends javax.swing.JFrame implements ActionListener{
 //           }
        
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+           
+        Creation_of_the_individual creation=new Creation_of_the_individual();
+        
+        
+        Graphics g7=jPanel7.getGraphics();
+            shapes=paintings[2].getShapes();
+            Individual[]s=paintings[3].getShapes();
+          creation.Crossover(shapes, s);
+            for(int i=0;i<10;i++)
+        {
+            shapes=paintings[i].getShapes();
+            for(int j=0;j<6;j++)
+            {
+                System.out.println("height of the shape "+i+":"+shapes[j].getHeight());
+            }
+        }
+            for(int i=0;i<6;i++)
+        {
+     
+        
+      switch(second[i].getSelector())
+              {
+          case 0:
+              
+                   g7.drawRect(second[i].getX(), second[i].getY(), second[i].getHeight(),second[i].getLenght());                  
+                System.out.println(" square height : "+second[i].getHeight() + "square length : "+second[i].getLenght());
+                
+                  
+                   break;
+          case 1:
+              g7.drawOval(second[i].getX(), second[i].getY(), second[i].getHeight(),second[i].getLenght());
+             System.out.println("oval height 1  "+ second[i].getHeight());
+              break;
+          case 2:triangle.drawTraingle(g7, second[i].getX(), second[i].getY(), second[i].getHeight(),second[i].getLenght());
+              
+              }
+        }
+        
+            
+    }//GEN-LAST:event_jButton3ActionPerformed
     
     /**
      * @param args the command line arguments
@@ -298,9 +532,14 @@ public class Canvas extends javax.swing.JFrame implements ActionListener{
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
     // End of variables declaration//GEN-END:variables
 
  

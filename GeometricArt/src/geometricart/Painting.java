@@ -22,16 +22,21 @@ public class Painting {
         for (int i = 0; i < 6; i++) {
             int height = rand.nextInt(100) + 1; // height between 1 and 20
             int length = rand.nextInt(100) + 1; // length between 1 and 20
-              int x = rand.nextInt(100) + 1; // length between 1 and 20
-                int y= rand.nextInt(100) + 1; // length between 1 and 20
+            int x = rand.nextInt(270) +1 ; // length between 1 and 20
+            int y= rand.nextInt(120) + 1; // length between 1 and 20
+            int selector=rand.nextInt(3);
            // String color = new String[] {"red", "blue", "green", "yellow", "orange", "purple"}[rand.nextInt(6)];
-            shapes[i] = new Individual(x,y,height, length);
+            shapes[i] = new Individual(x,y,height, length,selector);
         }
     }
     
     public Individual[] getShapes() {
         return shapes;
     }
+     public void setShapes(Individual[] shapes) {
+       this.shapes=shapes;
+    }
+    
     
     public void createGeneration (){
         Painting[] paintings = new Painting[10];

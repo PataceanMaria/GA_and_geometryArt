@@ -11,14 +11,19 @@ package geometricart;
  */
 public class Individual {
 
-    int lenght, height, x, y;
+    int lenght, height, x, y,selector,color;
 
-    public Individual(int x, int y, int height, int lenght) {
+    public Individual(int x, int y, int height, int lenght,int selector) {
         this.height = height;
         this.lenght = lenght;
         this.x = x;
         this.y = y;
+        this.selector=selector;
 
+    }
+
+    public int getSelector() {
+        return selector;
     }
 
     
