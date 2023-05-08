@@ -201,17 +201,23 @@ public class Canvas extends javax.swing.JFrame {
     Individual shape;
     ArrayList<Painting> paintings, newpaintings,newpaintings2,newgeneration;
     Random random = new Random();
-    int grades[] = new int[10];
+    int grades[] = new int[100];
     Shape_method triangle = new Shape_method();
 
     Creation_of_new_paintings creation = new Creation_of_new_paintings();
+    
 
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        paintings = new ArrayList<Painting>(10);
-        for (int i = 0; i < 10; i++) {
+        paintings = new ArrayList<Painting>(100);
+         newpaintings = new ArrayList<Painting>(100);
+        newpaintings2 = new ArrayList<Painting>(100);
+        newgeneration=new ArrayList<Painting>(100);
+        for (int i = 0; i < 100; i++) {
             paintings.add(new Painting());
+            newpaintings.add(new Painting());
+            newpaintings2.add(new Painting());
         }
         Graphics g = jPanel1.getGraphics();
 
@@ -245,7 +251,7 @@ public class Canvas extends javax.swing.JFrame {
     int selectsecond;
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         repaint();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 100; i++) {
              System.out.println("Individual :" + i);
             painting = paintings.get(i);
             shapes = painting.getShapes();
@@ -256,25 +262,20 @@ public class Canvas extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    int k=0;
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
 
-        newpaintings = new ArrayList<Painting>(10);
-        newpaintings2 = new ArrayList<Painting>(10);
-        newgeneration=new ArrayList<Painting>(10);
-         for (int i = 0; i < 10; i++) {
+       while(k<100)
+       {
+        for (int i = 0; i < 100; i++) {
             shapes=paintings.get(i).getShapes();
-            newpaintings.add(new Painting());
-            newpaintings2.add(new Painting());
-        }
-        for (int i = 0; i < 10; i++) {
-            
             grades[i] = creation.fittness(shapes);
-            System.out.println("grades :" + grades[i]);
+            System.out.println("grades :"+i+" " + grades[i]);
 
         }
-        for (int i = 0; i < 10; i++) {
-            select = random.nextInt(10);
-            selectsecond = random.nextInt(10);
+        for (int i = 0; i < 100; i++) {
+            select = random.nextInt(100);
+            selectsecond = random.nextInt(100);
              System.out.println("grades :" + select);
               System.out.println("grades :" + selectsecond);
             
@@ -286,8 +287,8 @@ public class Canvas extends javax.swing.JFrame {
             {
                 firstparent=paintings.get(select).getShapes();
             }
-              select = random.nextInt(10);
-            selectsecond = random.nextInt(10);
+              select = random.nextInt(100);
+            selectsecond = random.nextInt(100);
             
             if(grades[select]<=grades[selectsecond])
             {
@@ -300,12 +301,13 @@ public class Canvas extends javax.swing.JFrame {
             for (int j = 0; j < 6; j++) {
                 System.out.println("first parent" + firstparent.get(j).getHeight());
             }
-             for (int j = 0; j < 6; j++) {
+             for (int j = 0; j < 6; j++) {                                                             
                 System.out.println("second parent" + secondparent.get(j).getHeight());
             }
              firstchild=paintings.get(i).getShapes();
              shapes=newpaintings.get(i).getShapes();
              creation.crossover(firstparent, secondparent, firstchild);
+             creation.mutation(firstchild);
               for (int j = 0; j < 6; j++) {
                 System.out.println("first child" + firstchild.get(j).getHeight());
                 shapes.get(j).setHeight(firstchild.get(j).getHeight());
@@ -314,27 +316,29 @@ public class Canvas extends javax.swing.JFrame {
               shapes=newpaintings2.get(i).getShapes();
               
              creation.crossover2(firstparent, secondparent, secondchild);
+              creation.mutation(secondchild);
               for (int j = 0; j < 6; j++) {
                 System.out.println("second child" + secondchild.get(j).getHeight());
                 shapes.get(j).setHeight(secondchild.get(j).getHeight());
             }
               
               
-            newgeneration.addAll(newpaintings.subList(0, 5));
-             newgeneration.addAll(newpaintings2.subList(0, 5));
+            newgeneration.addAll(newpaintings.subList(0, 50));
+             newgeneration.addAll(newpaintings2.subList(0, 50));
             
             paintings.clear();
             paintings.addAll(newgeneration);
 
         }
-        for (int i = 0; i < 10; i++) {
+       }
+        for (int i = 0; i < 100; i++) {
             shapes= newpaintings.get(i).getShapes();
             System.out.println("paintings " + i);
             for (int j = 0; j < 6; j++) {
                 System.out.println("shape" + j + " " + shapes.get(j).getHeight());
             }
         }
-         for (int i = 0; i < 10; i++) {
+         for (int i = 0; i < 100; i++) {
             shapes= newpaintings2.get(i).getShapes();
             System.out.println("paintings " + i);
             for (int j = 0; j < 6; j++) {
@@ -342,14 +346,14 @@ public class Canvas extends javax.swing.JFrame {
             }
         }
          
-         for (int i = 0; i < 10; i++) {
+         for (int i = 0; i < 100; i++) {
             shapes= newgeneration.get(i).getShapes();
             System.out.println("paintings " + i);
             for (int j = 0; j < 6; j++) {
                 System.out.println("shape for real now :" + j + " " + shapes.get(j).getHeight());
             }
         }
-          for (int i = 0; i < 10; i++) {
+          for (int i = 0; i < 100; i++) {
             shapes= paintings.get(i).getShapes();
             System.out.println("paintings " + i);
             for (int j = 0; j < 6; j++) {
