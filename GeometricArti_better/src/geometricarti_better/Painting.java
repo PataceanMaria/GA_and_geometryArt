@@ -15,8 +15,10 @@ import java.util.Random;
 public class Painting {
      Random random = new Random();
     private ArrayList<Individual> shapes;
-    public Painting()
+    int grades;
+    public Painting(int grades)
     {
+        this.grades=grades;
         shapes=new ArrayList<Individual>(6);
         for(int i=0;i<6;i++)
         {
@@ -32,6 +34,15 @@ public class Painting {
     {
         return shapes;
     }
+
+    public int getGrades() {
+        return grades;
+    }
+
+    public void setGrades(int grades) {
+        this.grades = grades;
+    }
+    
     public void setShapes (ArrayList<Individual>shapes)
     {
         this.shapes=shapes;

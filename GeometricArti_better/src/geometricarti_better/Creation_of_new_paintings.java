@@ -20,7 +20,7 @@ public class Creation_of_new_paintings {
 
     public void crossover(ArrayList<Individual> firstparent, ArrayList<Individual> secondparent, ArrayList<Individual> child) {
         position = rand.nextInt(4) + 1;
-        System.out.println("positon" + position);
+        //System.out.println("positon" + position);
         for (int i = 0; i < position; i++) {
 
             child.get(i).setHeight(firstparent.get(i).getHeight());
@@ -35,7 +35,7 @@ public class Creation_of_new_paintings {
     }
 
     public void crossover2(ArrayList<Individual> firstparent, ArrayList<Individual> secondparent, ArrayList<Individual> child) {
-        System.out.println("positon" + position);
+       // System.out.println("positon" + position);
 
         for (int i = 0; i < position; i++) {
 
@@ -128,5 +128,25 @@ public class Creation_of_new_paintings {
         return grade;
 
     }
+    public void bubbleSort(ArrayList<Painting>paintings) {
+    int n = paintings.size();
+      System.out.println("SIZE OF ARRAY "+n);
+    int k=0;
+    for (int i = 0; i < 100 - 1; i++) {
+        k++;
+       
+        for (int j = 0; j < 100 - i - 1; j++) {
+            if (paintings.get(j).getGrades() < paintings.get(j+1).getGrades()) {
+                // swap arr[j] and arr[j+1]
+                int temp = paintings.get(j).getGrades();
+                paintings.get(j).setGrades(paintings.get(j+1).getGrades());
+                paintings.get(j+1).setGrades(temp);
+                ArrayList<Individual> aux=paintings.get(j).getShapes();
+                paintings.get(j).setShapes(paintings.get(j+1).getShapes());
+                paintings.get(j+1).setShapes(aux);
+            }
+        }
+    }
+}
 
 }
