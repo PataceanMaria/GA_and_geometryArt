@@ -19,36 +19,48 @@ public class Creation_of_new_paintings {
     int shape;
 
     public void crossover(ArrayList<Individual> firstparent, ArrayList<Individual> secondparent, ArrayList<Individual> child) {
+        child.clear();
         position = rand.nextInt(4) + 1;
-        //System.out.println("positon" + position);
-        for (int i = 0; i < position; i++) {
-
-            child.get(i).setHeight(firstparent.get(i).getHeight());
-
-        }
-        for (int i = position; i < 6; i++) {
-
-            child.get(i).setHeight(secondparent.get(i).getHeight());
-
-        }
+       
+       for (int i = 0; i < position; i++) {
+        child.add(new Individual(firstparent.get(i).getHeight(), firstparent.get(i).getLength(), firstparent.get(i).getX(), firstparent.get(i).getY(), firstparent.get(i).getSelector()));
+    }
+    for (int i = position; i < 6; i++) {
+        child.add(new Individual(secondparent.get(i).getHeight(), secondparent.get(i).getLength(), secondparent.get(i).getX(), secondparent.get(i).getY(), secondparent.get(i).getSelector()));
+    }
+    
 
     }
-
+  
     public void crossover2(ArrayList<Individual> firstparent, ArrayList<Individual> secondparent, ArrayList<Individual> child) {
-       // System.out.println("positon" + position);
-
-        for (int i = 0; i < position; i++) {
-
-            child.get(i).setHeight(secondparent.get(i).getHeight());
-
-        }
-        for (int i = position; i < 6; i++) {
-
-            child.get(i).setHeight(firstparent.get(i).getHeight());
-
-        }
+        
+       child.clear();
+      
+      for (int i = 0; i < position; i++) {
+        child.add(new Individual(secondparent.get(i).getHeight(), secondparent.get(i).getLength(), secondparent.get(i).getX(), secondparent.get(i).getY(), secondparent.get(i).getSelector()));
+    }
+    for (int i = position; i < 6; i++) {
+        child.add(new Individual(firstparent.get(i).getHeight(), firstparent.get(i).getLength(), firstparent.get(i).getX(), firstparent.get(i).getY(), firstparent.get(i).getSelector()));
+    }
+   
 
     }
+    public ArrayList<Individual> selection(ArrayList<Painting> paintings) {
+    int max = 0;
+    int bestindex = 0;
+    for (int j = 0; j < 5; j++) {
+        int select = rand.nextInt(100);
+        System.out.println("select "+select +"with garde "+paintings.get(select).getGrades());
+       
+        if (max < paintings.get(select).getGrades()) {
+            max = paintings.get(select).getGrades();
+            bestindex = select;
+        }
+    }
+    System.out.println("index "+bestindex);
+    return paintings.get(bestindex).getShapes();
+}
+
 
     public void mutation(ArrayList<Individual> child) {
         shape = rand.nextInt(6);
@@ -137,7 +149,7 @@ public class Creation_of_new_paintings {
        
         for (int j = 0; j < 100 - i - 1; j++) {
             if (paintings.get(j).getGrades() < paintings.get(j+1).getGrades()) {
-                // swap arr[j] and arr[j+1]
+                
                 int temp = paintings.get(j).getGrades();
                 paintings.get(j).setGrades(paintings.get(j+1).getGrades());
                 paintings.get(j+1).setGrades(temp);

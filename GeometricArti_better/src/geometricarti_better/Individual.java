@@ -9,7 +9,7 @@ package geometricarti_better;
  *
  * @author maria
  */
-public class Individual {
+public final class  Individual {
     private int height,length,x,y,selector;
 
     public Individual(int height, int length, int x, int y, int selector) {

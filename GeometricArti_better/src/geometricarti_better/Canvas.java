@@ -250,26 +250,25 @@ public class Canvas extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
  Painting painting, secondshape, thirdshape, forthsape, fifthshape, sixthshape;
-    ArrayList<Individual> shapes, second, third, forth, fifth, sixth, firstparent, secondparent,firstchild,secondchild;
-//    Individual[] firstparent, firstchild;
-//    Individual[] secondparent, secondchild;
-//    Painting[] paintings, newpaintings;
+    ArrayList<Individual> shapes, second, third, forth, fifth, sixth, firstparent, secondparent, firstchild, secondchild;
     Individual shape;
-    ArrayList<Painting> paintings, newpaintings,newpaintings2,newgeneration;
+    ArrayList<Painting> paintings, newpaintings, newpaintings2, newgeneration;
     Random random = new Random();
-    int grades=0,limit=100;
+    int grades = 0, limit = 100;
     Shape_method triangle = new Shape_method();
 
     Creation_of_new_paintings creation = new Creation_of_new_paintings();
-    
 
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+
+        firstparent = new ArrayList<Individual>();
+        secondparent = new ArrayList<Individual>();
         paintings = new ArrayList<Painting>(limit);
-         newpaintings = new ArrayList<Painting>(limit);
+        newpaintings = new ArrayList<Painting>(limit);
         newpaintings2 = new ArrayList<Painting>(limit);
-        newgeneration=new ArrayList<Painting>(limit);
+        newgeneration = new ArrayList<Painting>(limit);
         for (int i = 0; i < limit; i++) {
             paintings.add(new Painting(grades));
             newpaintings.add(new Painting(grades));
@@ -303,218 +302,130 @@ public class Canvas extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    int select;
-    int selectsecond;
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        repaint();
-        for (int i = 0; i < limit; i++) {
-             System.out.println("Individual :" + i);
-            painting = paintings.get(i);
-            shapes = painting.getShapes();
-            for (int j = 0; j < 6; j++) {
-                System.out.println("Height: " + shapes.get(j).getHeight() );
-            }
 
-        }
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+//        repaint();
+//        for (int i = 0; i < limit; i++) {
+//            System.out.println("Individual :" + i);
+//            painting = paintings.get(i);
+//            shapes = painting.getShapes();
+//            for (int j = 0; j < 6; j++) {
+//                System.out.println("Height: " + shapes.get(j).getHeight());
+//            }
+//
+//        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
- 
-    
+    int max;
+    int count = 0;
+    int bestindex = 0;
+
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       
-        
+
         jCheckBox1.setSelected(false);
-        
-        
-        int k=0;
-       while(k<100)
-       {
-           k++;
-        for (int i = 0; i < limit; i++) {
-            shapes=paintings.get(i).getShapes();
-           paintings.get(i).setGrades(creation.fittness(shapes));
-          // System.out.println("AAAAAAAAAAA GRADESSSS AAAAAAAA"+paintings.get(i).getGrades());
+        int k = 0;
+        k++;
+
+        firstparent = new ArrayList<>();
+        secondparent = new ArrayList<>();
+        firstchild = new ArrayList<>();
+        secondchild = new ArrayList<>();
+        newpaintings = new ArrayList<>(100);
+        newpaintings2 = new ArrayList<>(100);
+
+        for (int i = 0; i < 100; i++) {
+            shapes = paintings.get(i).getShapes();
+            paintings.get(i).setGrades(creation.fittness(shapes));
+        }
+
+        for (int i = 0; i < 100; i++) {
+            newpaintings.add(new Painting(grades));
+            newpaintings2.add(new Painting(grades));
 
         }
-        for (int i = 0; i < limit; i++) {
-            select = random.nextInt(limit);
-            selectsecond = random.nextInt(limit);
-//             System.out.println("grades :" + select);
-//              System.out.println("grades :" + selectsecond);
-            
-            if(paintings.get(select).getGrades()<=paintings.get(selectsecond).getGrades())
-            {
-                firstparent=paintings.get(selectsecond).getShapes();
+
+        creation.bubbleSort(paintings);
+
+        for (int i = 0; i < 100; i++) {
+            shapes = paintings.get(i).getShapes();
+            System.out.println("paitning :" + i);
+            for (int j = 0; j < 6; j++) {
+                System.out.print("  " + shapes.get(j).getHeight());
             }
-            else
-            {
-                firstparent=paintings.get(select).getShapes();
+            System.out.println(" \n");
+        }
+
+        for (int i = 0; i < 100; i++) {
+            firstparent.clear();
+            firstparent.addAll(creation.selection(paintings));
+
+            for (int j = 0; j < 6; j++) {
+                System.out.print(firstparent.get(j).getHeight() + "  ");
             }
-              select = random.nextInt(limit);
-            selectsecond = random.nextInt(limit);
-            
-            if(paintings.get(select).getGrades()<=paintings.get(selectsecond).getGrades())
-            {
-                secondparent=paintings.get(selectsecond).getShapes();
+            System.out.println(" \n");
+            secondparent.clear();
+            secondparent.addAll(creation.selection(paintings));
+
+            for (int j = 0; j < 6; j++) {
+                System.out.print(secondparent.get(j).getHeight() + "  ");
             }
-            else
-            {
-                secondparent=paintings.get(select).getShapes();
-            }
-//            for (int j = 0; j < 6; j++) {
-//                System.out.println("first parent" + firstparent.get(j).getHeight());
-//            }
-//             for (int j = 0; j < 6; j++) {                                                             
-//                System.out.println("second parent" + secondparent.get(j).getHeight());
-//            }
-             firstchild=paintings.get(i).getShapes();
-             shapes=newpaintings.get(i).getShapes();
-             creation.crossover(firstparent, secondparent, firstchild);
-             creation.mutation(firstchild);
-              for (int j = 0; j < 6; j++) {
-                //System.out.println("first child" + firstchild.get(j).getHeight());
+            System.out.println(" \n");
+
+            shapes = newpaintings.get(i).getShapes();
+            creation.crossover(firstparent, secondparent, firstchild);
+            creation.mutation(firstchild);
+            for (int j = 0; j < 6; j++) {
                 shapes.get(j).setHeight(firstchild.get(j).getHeight());
-                shapes.get(j).setLength(firstchild.get(j).getLength());
-                shapes.get(j).setX(firstchild.get(j).getX());
-                shapes.get(j).setY(firstchild.get(j).getY());
-                shapes.get(j).setSelector(firstchild.get(j).getSelector());
             }
-              secondchild=paintings.get(i).getShapes();
-              shapes=newpaintings2.get(i).getShapes();
-              
-             creation.crossover2(firstparent, secondparent, secondchild);
-              creation.mutation(secondchild);
-              for (int j = 0; j < 6; j++) {
-                //System.out.println("second child" + secondchild.get(j).getHeight());
-                shapes.get(j).setHeight(secondchild.get(j).getHeight());
-                 shapes.get(j).setLength(secondchild.get(j).getLength());
-                  shapes.get(j).setX(secondchild.get(j).getX());
-                   shapes.get(j).setY(secondchild.get(j).getY());
-                    shapes.get(j).setSelector(secondchild.get(j).getSelector());
-                
+
+            shapes = newpaintings2.get(i).getShapes();
+            creation.crossover2(firstparent, secondparent, secondchild);
+            creation.mutation(secondchild);
+            for (int j = 0; j < 6; j++) {
+                shapes.get(j).setHeight(firstchild.get(j).getHeight());
             }
-              
-              
-            newgeneration.addAll(newpaintings.subList(0, limit/2));
-             newgeneration.addAll(newpaintings2.subList(0, limit/2));
-            
-            paintings.clear();
-            paintings.addAll(newgeneration);
 
         }
-       
-       }
-       
-       for(int i=0;i<limit;i++)
-            {
-               
-               System.out.println("grades 99:" +i+" "+paintings.get(i).getGrades());
-                shapes=paintings.get(i).getShapes();
-                System.out.println("Paintings" +i);
-                
-                for(int j=0;j<6;j++)
-                {
-                    System.out.println("Shape "+j+" "+shapes.get(j).getHeight());
-                }
+        newgeneration.addAll(newpaintings.subList(0, limit / 2));
+        newgeneration.addAll(newpaintings2.subList(0, limit / 2));
+        paintings.clear();
+        paintings.addAll(newgeneration);
+        for (int i = 0; i < limit; i++) {
+
+            System.out.println("grades 99:" + i + " " + paintings.get(i).getGrades());
+            shapes = paintings.get(i).getShapes();
+            System.out.println("Paintings" + i);
+
+            for (int j = 0; j < 6; j++) {
+                System.out.println("Shape " + j + " " + shapes.get(j).getHeight());
             }
-       creation.bubbleSort(paintings);
-       
-       for(int i=0;i<limit;i++)
-            {
-               
-               System.out.println("grades 99:" +i+" "+paintings.get(i).getGrades());
-                shapes=paintings.get(i).getShapes();
-                System.out.println("Paintings" +i);
-                
-                for(int j=0;j<6;j++)
-                {
-                    System.out.println("new Shape "+j+" "+shapes.get(j).getHeight());
-                }
-                
-            }
-       shapes=paintings.get(0).getShapes();
-       Graphics g = jPanel1.getGraphics();
-       System.out.println("Grades "+paintings.get(0).getGrades());
-        for (int i = 0; i < 6; i++) {
-            switch (shapes.get(i).getSelector()) {
-
-                case 0:
-
-                    g.drawRect(shapes.get(i).getX(), shapes.get(i).getY(), shapes.get(i).getHeight(), shapes.get(i).getLength());
-                    //System.out.println(" square height : " + shapes.get(i).getHeight() + "square length : " + shapes.get(i).getLength());
-
-                    break;
-                case 1:
-                    g.drawOval(shapes.get(i).getX(), shapes.get(i).getY(), shapes.get(i).getHeight(), shapes.get(i).getLength());
-                    //System.out.println("oval height 1  " + shapes.get(i).getHeight());
-                    break;
-                case 2:
-                    triangle.drawTraingle(g, shapes.get(i).getX(), shapes.get(i).getY(), shapes.get(i).getHeight(), shapes.get(i).getLength());
-
-            }
-
-            System.out.println(" selector : " + shapes.get(i).getSelector());
         }
-      shapes=paintings.get(1).getShapes();
-       Graphics g2 = jPanel2.getGraphics();
-        for (int i = 0; i < 6; i++) {
-            switch (shapes.get(i).getSelector()) {
+        creation.bubbleSort(paintings);
 
-                case 0:
+        for (int i = 0; i < limit; i++) {
 
-                    g2.drawRect(shapes.get(i).getX(), shapes.get(i).getY(), shapes.get(i).getHeight(), shapes.get(i).getLength());
-                  //  System.out.println(" square height : " + shapes.get(i).getHeight() + "square length : " + shapes.get(i).getLength());
+            System.out.println("grades 99:" + i + " " + paintings.get(i).getGrades());
+            shapes = paintings.get(i).getShapes();
+            System.out.println("Paintings" + i);
 
-                    break;
-                case 1:
-                    g2.drawOval(shapes.get(i).getX(), shapes.get(i).getY(), shapes.get(i).getHeight(), shapes.get(i).getLength());
-                    System.out.println("oval height 1  " + shapes.get(i).getHeight());
-                   // break;
-                case 2:
-                    triangle.drawTraingle(g2, shapes.get(i).getX(), shapes.get(i).getY(), shapes.get(i).getHeight(), shapes.get(i).getLength());
-
+            for (int j = 0; j < 6; j++) {
+                System.out.println("new Shape " + j + " " + shapes.get(j).getHeight());
             }
 
-            System.out.println(" selector : " + shapes.get(i).getSelector());
         }
-        shapes=paintings.get(2).getShapes();
-       Graphics g3 = jPanel3.getGraphics();
-        for (int i = 0; i < 6; i++) {
-            switch (shapes.get(i).getSelector()) {
 
-                case 0:
-
-                    g3.drawRect(shapes.get(i).getX(), shapes.get(i).getY(), shapes.get(i).getHeight(), shapes.get(i).getLength());
-                   // System.out.println(" square height : " + shapes.get(i).getHeight() + "square length : " + shapes.get(i).getLength());
-
-                    break;
-                case 1:
-                    g3.drawOval(shapes.get(i).getX(), shapes.get(i).getY(), shapes.get(i).getHeight(), shapes.get(i).getLength());
-                    System.out.println("oval height 1  " + shapes.get(i).getHeight());
-                   // break;
-                case 2:
-                    triangle.drawTraingle(g3, shapes.get(i).getX(), shapes.get(i).getY(), shapes.get(i).getHeight(), shapes.get(i).getLength());
-
-            }
-
-            System.out.println(" selector : " + shapes.get(i).getSelector());
-        }
-       
-      
 
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        if(jCheckBox1.isSelected())
-        {
-            System.out.println("gardes"+paintings.get(0).getGrades());
-            paintings.get(0).setGrades(paintings.get(0).getGrades()+10);
-            System.out.println("gardes+10"+paintings.get(0).getGrades());
-        }
-        else
-        { System.out.println("gardes"+paintings.get(0).getGrades());
-             paintings.get(0).setGrades(paintings.get(0).getGrades()-10);
-              System.out.println("gardes+10"+paintings.get(0).getGrades());
+        if (jCheckBox1.isSelected()) {
+            System.out.println("gardes" + paintings.get(0).getGrades());
+            paintings.get(0).setGrades(paintings.get(0).getGrades() + 10);
+            System.out.println("gardes+10" + paintings.get(0).getGrades());
+        } else {
+            System.out.println("gardes" + paintings.get(0).getGrades());
+            paintings.get(0).setGrades(paintings.get(0).getGrades() - 10);
+            System.out.println("gardes+10" + paintings.get(0).getGrades());
         }
     }//GEN-LAST:event_jCheckBox1ActionPerformed
 
