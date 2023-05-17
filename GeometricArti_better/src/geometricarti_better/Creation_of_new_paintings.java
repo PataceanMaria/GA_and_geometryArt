@@ -50,7 +50,6 @@ public class Creation_of_new_paintings {
     int bestindex = 0;
     for (int j = 0; j < 5; j++) {
         int select = rand.nextInt(100);
-        System.out.println("select "+select +"with garde "+paintings.get(select).getGrades());
        
         if (max < paintings.get(select).getGrades()) {
             max = paintings.get(select).getGrades();

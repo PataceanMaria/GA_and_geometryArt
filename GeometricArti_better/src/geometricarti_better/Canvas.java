@@ -255,6 +255,7 @@ public class Canvas extends javax.swing.JFrame {
     ArrayList<Painting> paintings, newpaintings, newpaintings2, newgeneration;
     Random random = new Random();
     int grades = 0, limit = 100;
+    int halftime = limit / 2;
     Shape_method triangle = new Shape_method();
 
     Creation_of_new_paintings creation = new Creation_of_new_paintings();
@@ -271,8 +272,7 @@ public class Canvas extends javax.swing.JFrame {
         newgeneration = new ArrayList<Painting>(limit);
         for (int i = 0; i < limit; i++) {
             paintings.add(new Painting(grades));
-            newpaintings.add(new Painting(grades));
-            newpaintings2.add(new Painting(grades));
+
         }
         Graphics g = jPanel1.getGraphics();
 
@@ -324,92 +324,93 @@ public class Canvas extends javax.swing.JFrame {
 
         jCheckBox1.setSelected(false);
         int k = 0;
-        k++;
+        while (k < 100) {
+            System.out.println("GENERATION NUMBER " + k);
+            k++;
 
-        firstparent = new ArrayList<>();
-        secondparent = new ArrayList<>();
-        firstchild = new ArrayList<>();
-        secondchild = new ArrayList<>();
-        newpaintings = new ArrayList<>(100);
-        newpaintings2 = new ArrayList<>(100);
-
-        for (int i = 0; i < 100; i++) {
-            shapes = paintings.get(i).getShapes();
-            paintings.get(i).setGrades(creation.fittness(shapes));
-        }
-
-        for (int i = 0; i < 100; i++) {
-            newpaintings.add(new Painting(grades));
-            newpaintings2.add(new Painting(grades));
-
-        }
-
-        creation.bubbleSort(paintings);
-
-        for (int i = 0; i < 100; i++) {
-            shapes = paintings.get(i).getShapes();
-            System.out.println("paitning :" + i);
-            for (int j = 0; j < 6; j++) {
-                System.out.print("  " + shapes.get(j).getHeight());
-            }
-            System.out.println(" \n");
-        }
-
-        for (int i = 0; i < 100; i++) {
-            firstparent.clear();
-            firstparent.addAll(creation.selection(paintings));
-
-            for (int j = 0; j < 6; j++) {
-                System.out.print(firstparent.get(j).getHeight() + "  ");
-            }
-            System.out.println(" \n");
-            secondparent.clear();
-            secondparent.addAll(creation.selection(paintings));
-
-            for (int j = 0; j < 6; j++) {
-                System.out.print(secondparent.get(j).getHeight() + "  ");
-            }
-            System.out.println(" \n");
-
-            shapes = newpaintings.get(i).getShapes();
-            creation.crossover(firstparent, secondparent, firstchild);
-            creation.mutation(firstchild);
-            for (int j = 0; j < 6; j++) {
-                shapes.get(j).setHeight(firstchild.get(j).getHeight());
+            firstparent = new ArrayList<>();
+            secondparent = new ArrayList<>();
+            firstchild = new ArrayList<>();
+            secondchild = new ArrayList<>();
+            newpaintings.clear();
+            newpaintings2.clear();
+            for (int i = 0; i < 100; i++) {
+                shapes = paintings.get(i).getShapes();
+                paintings.get(i).setGrades(creation.fittness(shapes));
             }
 
-            shapes = newpaintings2.get(i).getShapes();
-            creation.crossover2(firstparent, secondparent, secondchild);
-            creation.mutation(secondchild);
-            for (int j = 0; j < 6; j++) {
-                shapes.get(j).setHeight(firstchild.get(j).getHeight());
+            for (int i = 0; i < 100; i++) {
+                newpaintings.add(new Painting(grades));
+                newpaintings2.add(new Painting(grades));
+
             }
 
-        }
-        newgeneration.addAll(newpaintings.subList(0, limit / 2));
-        newgeneration.addAll(newpaintings2.subList(0, limit / 2));
-        paintings.clear();
-        paintings.addAll(newgeneration);
-        for (int i = 0; i < limit; i++) {
+            creation.bubbleSort(paintings);
 
-            System.out.println("grades 99:" + i + " " + paintings.get(i).getGrades());
-            shapes = paintings.get(i).getShapes();
-            System.out.println("Paintings" + i);
-
-            for (int j = 0; j < 6; j++) {
-                System.out.println("Shape " + j + " " + shapes.get(j).getHeight());
+            for (int i = 0; i < 100; i++) {
+                shapes = paintings.get(i).getShapes();
+                System.out.println("paitning :" + i);
+                for (int j = 0; j < 6; j++) {
+                    System.out.print("  " + shapes.get(j).getHeight());
+                }
+                System.out.println(" \n");
             }
-        }
-        creation.bubbleSort(paintings);
 
-        for (int i = 0; i < limit; i++) {
+            for (int i = 0; i < 50; i++) {
+                firstparent.clear();
+                firstparent.addAll(creation.selection(paintings));
 
-            System.out.println("grades 99:" + i + " " + paintings.get(i).getGrades());
-            shapes = paintings.get(i).getShapes();
-            System.out.println("Paintings" + i);
+                for (int j = 0; j < 6; j++) {
+                    System.out.print(firstparent.get(j).getHeight() + "  ");
+                }
+                System.out.println(" \n");
+                secondparent.clear();
+                secondparent.addAll(creation.selection(paintings));
 
-            for (int j = 0; j < 6; j++) {
-                System.out.println("new Shape " + j + " " + shapes.get(j).getHeight());
+                for (int j = 0; j < 6; j++) {
+                    System.out.print(secondparent.get(j).getHeight() + "  ");
+                }
+                System.out.println(" \n");
+
+                shapes = newpaintings.get(i).getShapes();
+
+                creation.crossover(firstparent, secondparent, firstchild);
+                creation.mutation(firstchild);
+                System.out.println("Paitning " + i);
+                for (int j = 0; j < 6; j++) {
+                    System.out.println("child1 " + firstchild.get(j).getHeight());
+                    shapes.get(j).setHeight(firstchild.get(j).getHeight());
+
+                }
+
+                second = newpaintings2.get(i).getShapes();
+                creation.crossover2(firstparent, secondparent, secondchild);
+                creation.mutation(secondchild);
+                for (int j = 0; j < 6; j++) {
+                    System.out.println("child2 " + secondchild.get(j).getHeight());
+                    second.get(j).setHeight(secondchild.get(j).getHeight());
+
+                }
+
+                System.out.println("with garde " + paintings.get(i).getGrades());
+            }
+          
+           
+
+           
+            paintings.clear();
+            paintings.addAll(newpaintings.subList(0, limit / 2));
+             paintings.addAll(newpaintings2.subList(0, limit / 2));
+
+
+           
+            for (int i = 0; i < 100; i++) {
+                second = paintings.get(i).getShapes();
+                System.out.print("New painting from paitnings  " + i);
+                for (int j = 0; j < 6; j++) {
+                    System.out.print(" " + second.get(j).getHeight() + " ");
+                }
+                System.out.print("\n");
             }
 
         }

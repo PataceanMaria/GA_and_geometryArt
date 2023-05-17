@@ -30,6 +30,12 @@ public class Painting {
             shapes.add(new Individual(height, length,  x,  y,selector));
         }
     }
+    
+    
+    public Painting()
+    {
+        
+    }
     public ArrayList<Individual> getShapes()
     {
         return shapes;
