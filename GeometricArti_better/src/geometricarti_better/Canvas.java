@@ -304,16 +304,8 @@ public class Canvas extends javax.swing.JFrame {
 
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-//        repaint();
-//        for (int i = 0; i < limit; i++) {
-//            System.out.println("Individual :" + i);
-//            painting = paintings.get(i);
-//            shapes = painting.getShapes();
-//            for (int j = 0; j < 6; j++) {
-//                System.out.println("Height: " + shapes.get(j).getHeight());
-//            }
-//
-//        }
+        repaint();
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     int max;
@@ -325,7 +317,7 @@ public class Canvas extends javax.swing.JFrame {
         jCheckBox1.setSelected(false);
         int k = 0;
         while (k < 100) {
-            System.out.println("GENERATION NUMBER " + k);
+
             k++;
 
             firstparent = new ArrayList<>();
@@ -337,6 +329,7 @@ public class Canvas extends javax.swing.JFrame {
             for (int i = 0; i < 100; i++) {
                 shapes = paintings.get(i).getShapes();
                 paintings.get(i).setGrades(creation.fittness(shapes));
+                //System.out.println("gardes " + paintings.get(i).getGrades());
             }
 
             for (int i = 0; i < 100; i++) {
@@ -349,37 +342,41 @@ public class Canvas extends javax.swing.JFrame {
 
             for (int i = 0; i < 100; i++) {
                 shapes = paintings.get(i).getShapes();
-                System.out.println("paitning :" + i);
-                for (int j = 0; j < 6; j++) {
-                    System.out.print("  " + shapes.get(j).getHeight());
-                }
-                System.out.println(" \n");
+//                System.out.println("paitning :" + i);
+//                for (int j = 0; j < 6; j++) {
+//                    System.out.print("  " + shapes.get(j).getHeight());
+//                }
+//                System.out.println(" \n");
             }
 
             for (int i = 0; i < 50; i++) {
                 firstparent.clear();
                 firstparent.addAll(creation.selection(paintings));
 
-                for (int j = 0; j < 6; j++) {
-                    System.out.print(firstparent.get(j).getHeight() + "  ");
-                }
-                System.out.println(" \n");
+//                for (int j = 0; j < 6; j++) {
+//                    System.out.print(firstparent.get(j).getHeight() + "  ");
+//                }
+//                System.out.println(" \n");
                 secondparent.clear();
                 secondparent.addAll(creation.selection(paintings));
 
-                for (int j = 0; j < 6; j++) {
-                    System.out.print(secondparent.get(j).getHeight() + "  ");
-                }
-                System.out.println(" \n");
-
+//                for (int j = 0; j < 6; j++) {
+//                    System.out.print(secondparent.get(j).getHeight() + "  ");
+//                }
+//                System.out.println(" \n");
                 shapes = newpaintings.get(i).getShapes();
 
                 creation.crossover(firstparent, secondparent, firstchild);
                 creation.mutation(firstchild);
-                System.out.println("Paitning " + i);
+                //  System.out.println("Paitning " + i);
                 for (int j = 0; j < 6; j++) {
-                    System.out.println("child1 " + firstchild.get(j).getHeight());
+                    //System.out.println("child1 " + firstchild.get(j).getHeight());
                     shapes.get(j).setHeight(firstchild.get(j).getHeight());
+                    shapes.get(j).setHeight(firstchild.get(j).getHeight());
+                    shapes.get(j).setLength(firstchild.get(j).getLength());
+                    shapes.get(j).setX(firstchild.get(j).getX());
+                    shapes.get(j).setY(firstchild.get(j).getY());
+                    shapes.get(j).setSelector(firstchild.get(j).getSelector());
 
                 }
 
@@ -387,30 +384,159 @@ public class Canvas extends javax.swing.JFrame {
                 creation.crossover2(firstparent, secondparent, secondchild);
                 creation.mutation(secondchild);
                 for (int j = 0; j < 6; j++) {
-                    System.out.println("child2 " + secondchild.get(j).getHeight());
+                    // System.out.println("child2 " + secondchild.get(j).getHeight());
                     second.get(j).setHeight(secondchild.get(j).getHeight());
+                    second.get(j).setLength(secondchild.get(j).getLength());
+                    second.get(j).setX(secondchild.get(j).getX());
+                    second.get(j).setY(secondchild.get(j).getY());
+                    second.get(j).setSelector(secondchild.get(j).getSelector());
 
                 }
 
-                System.out.println("with garde " + paintings.get(i).getGrades());
+                //System.out.println("with garde " + paintings.get(i).getGrades());
             }
-          
-           
 
-           
             paintings.clear();
             paintings.addAll(newpaintings.subList(0, limit / 2));
-             paintings.addAll(newpaintings2.subList(0, limit / 2));
+            paintings.addAll(newpaintings2.subList(0, limit / 2));
 
+//            for (int i = 0; i < 100; i++) {
+//                second = paintings.get(i).getShapes();
+//                System.out.print("New painting from paitnings  " + i);
+//                for (int j = 0; j < 6; j++) {
+//                    System.out.print(" " + second.get(j).getHeight() + " ");
+//                }
+//                System.out.print("\n");
+//            }
+        }
+        for (int i = 0; i < 100; i++) {
+            shapes = paintings.get(i).getShapes();
+            paintings.get(i).setGrades(creation.fittness(shapes));
+        }
+        creation.bubbleSort(paintings);
+        for (int i = 0; i < 100; i++) {
+            second = paintings.get(i).getShapes();
+            System.out.println("gardes " + paintings.get(i).getGrades());
+            System.out.print("Paitning 99  " + i);
+            for (int j = 0; j < 6; j++) {
+                System.out.print(" " + second.get(j).getHeight() + " ");
+            }
+            System.out.print("\n");
+        }
 
-           
-            for (int i = 0; i < 100; i++) {
-                second = paintings.get(i).getShapes();
-                System.out.print("New painting from paitnings  " + i);
-                for (int j = 0; j < 6; j++) {
-                    System.out.print(" " + second.get(j).getHeight() + " ");
-                }
-                System.out.print("\n");
+        Graphics g = jPanel1.getGraphics();
+        Graphics g1 = jPanel2.getGraphics();
+        Graphics g2 = jPanel3.getGraphics();
+        Graphics g3 = jPanel4.getGraphics();
+        Graphics g4 = jPanel5.getGraphics();
+        Graphics g5 = jPanel6.getGraphics();
+        painting = paintings.get(0);
+        shapes = painting.getShapes();
+        second = paintings.get(1).getShapes();
+        third = paintings.get(2).getShapes();
+        forth = paintings.get(3).getShapes();
+        fifth = paintings.get(4).getShapes();
+        sixth = paintings.get(5).getShapes();
+        for (int i = 0; i < 6; i++) {
+            switch (shapes.get(i).getSelector()) {
+
+                case 0:
+
+                    g.drawRect(shapes.get(i).getX(), shapes.get(i).getY(), shapes.get(i).getHeight(), shapes.get(i).getLength());
+
+                    break;
+                case 1:
+                    g.drawOval(shapes.get(i).getX(), shapes.get(i).getY(), shapes.get(i).getHeight(), shapes.get(i).getLength());
+                    break;
+                case 2:
+                    triangle.drawTraingle(g, second.get(i).getX(), second.get(i).getY(), second.get(i).getHeight(), second.get(i).getLength());
+
+            }
+
+            System.out.println(" X : " + shapes.get(i).getX() + "  " + "Y" + shapes.get(i).getY());
+        }
+        for (int i = 0; i < 6; i++) {
+            switch (second.get(i).getSelector()) {
+
+                case 0:
+
+                    g1.drawRect(second.get(i).getX(), second.get(i).getY(), second.get(i).getHeight(), second.get(i).getLength());
+
+                    break;
+                case 1:
+                    g1.drawOval(second.get(i).getX(), second.get(i).getY(), second.get(i).getHeight(), second.get(i).getLength());
+                    break;
+                case 2:
+                    triangle.drawTraingle(g1, second.get(i).getX(), second.get(i).getY(), second.get(i).getHeight(), second.get(i).getLength());
+
+            }
+
+        }
+        for (int i = 0; i < 6; i++) {
+            switch (third.get(i).getSelector()) {
+
+                case 0:
+
+                    g2.drawRect(third.get(i).getX(), third.get(i).getY(), third.get(i).getHeight(), third.get(i).getLength());
+
+                    break;
+                case 1:
+                    g2.drawOval(third.get(i).getX(), third.get(i).getY(), third.get(i).getHeight(), third.get(i).getLength());
+                    break;
+                case 2:
+                    triangle.drawTraingle(g2, third.get(i).getX(), third.get(i).getY(), third.get(i).getHeight(), third.get(i).getLength());
+
+            }
+
+        }
+        for (int i = 0; i < 6; i++) {
+            switch (forth.get(i).getSelector()) {
+
+                case 0:
+
+                    g3.drawRect(forth.get(i).getX(), forth.get(i).getY(), forth.get(i).getHeight(), forth.get(i).getLength());
+
+                    break;
+                case 1:
+                    g3.drawOval(forth.get(i).getX(), forth.get(i).getY(), forth.get(i).getHeight(), forth.get(i).getLength());
+                    break;
+                case 2:
+                    triangle.drawTraingle(g3, forth.get(i).getX(), forth.get(i).getY(), forth.get(i).getHeight(), forth.get(i).getLength());
+
+            }
+
+        }
+        for (int i = 0; i < 6; i++) {
+            switch (fifth.get(i).getSelector()) {
+
+                case 0:
+
+                    g4.drawRect(fifth.get(i).getX(), fifth.get(i).getY(), fifth.get(i).getHeight(), fifth.get(i).getLength());
+
+                    break;
+                case 1:
+                    g4.drawOval(fifth.get(i).getX(), fifth.get(i).getY(), fifth.get(i).getHeight(), fifth.get(i).getLength());
+                    break;
+                case 2:
+                    triangle.drawTraingle(g4, fifth.get(i).getX(), fifth.get(i).getY(), fifth.get(i).getHeight(), fifth.get(i).getLength());
+
+            }
+
+        }
+        for (int i = 0; i < 6; i++) {
+            switch (sixth.get(i).getSelector()) {
+
+                case 0:
+
+                    g5.drawRect(sixth.get(i).getX(), sixth.get(i).getY(), sixth.get(i).getHeight(), sixth.get(i).getLength());
+
+                    break;
+                case 1:
+                    g5.drawOval(sixth.get(i).getX(), sixth.get(i).getY(), sixth.get(i).getHeight(), sixth.get(i).getLength());
+                    break;
+                case 2:
+                    triangle.drawTraingle(g5, sixth.get(i).getX(), sixth.get(i).getY(), sixth.get(i).getHeight(), sixth.get(i).getLength());
+
             }
 
         }
@@ -421,11 +547,11 @@ public class Canvas extends javax.swing.JFrame {
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
         if (jCheckBox1.isSelected()) {
             System.out.println("gardes" + paintings.get(0).getGrades());
-            paintings.get(0).setGrades(paintings.get(0).getGrades() + 10);
+            paintings.get(0).setGrades(paintings.get(0).getGrades() + 20);
             System.out.println("gardes+10" + paintings.get(0).getGrades());
         } else {
             System.out.println("gardes" + paintings.get(0).getGrades());
-            paintings.get(0).setGrades(paintings.get(0).getGrades() - 10);
+            paintings.get(0).setGrades(paintings.get(0).getGrades() - 20);
             System.out.println("gardes+10" + paintings.get(0).getGrades());
         }
     }//GEN-LAST:event_jCheckBox1ActionPerformed

@@ -56,7 +56,7 @@ public class Creation_of_new_paintings {
             bestindex = select;
         }
     }
-    System.out.println("index "+bestindex);
+   // System.out.println("index "+bestindex);
     return paintings.get(bestindex).getShapes();
 }
 
@@ -89,59 +89,81 @@ public class Creation_of_new_paintings {
         int g=0;
         int patrat=0,triunghi=0,oval=0;
         int k = 0;
+        
         for (int i = 0; i < 6; i++) {
-            if (shapes.get(i).getHeight() > 80) {
-                k++;
+            if (shapes.get(i).getSelector()==2) {
+               triunghi++;
             }
-            if (shapes.get(i).getSelector() == 1) {
-                grade++;
+            else if (shapes.get(i).getSelector()==1) {
+               oval++;
             }
+            else {
+               patrat++;
+            }
+           
         }
-        for(int i=0;i<6;i++)
-        {
-            g=shapes.get(i).getHeight();
-            if(shapes.get(i).getX()>shapes.get(i).getY())
+        
+  
+            if(patrat==2&& oval==2&&triunghi==2)
             {
-                grade++;
+                grade=grade+20;
             }
-            if(shapes.get(i).getLength()>30)
-            {
-                grade++;
-            }
-            if(shapes.get(i).getSelector()==0)
-            {
-                patrat++;
-            }
-            else if(shapes.get(i).getSelector()==1)
-            {
-                oval++;
-            }
-            else
-            {
-                triunghi++;
-            }
-        }
-        if(triunghi<=2 || oval<=2||patrat<=2)
-        {
-            grade++;
-        }
-        if (k > 2 || k == 0) {
-            if (grade == 0) {
-                grade = 0;
-
-            } else {
-                grade--;
-            }
-        } else {
-            grade++;
-        }
+           
+        
+//        
+//        for (int i = 0; i < 6; i++) {
+//            if (shapes.get(i).getSelector()==1) {
+//                {
+//                    if(grade<10)
+//                        grade=0;
+//                    else
+//                        grade=grade-9;
+//                }
+//           
+//            }
+//        }
+//        for(int i=0;i<6;i++)
+//        {
+//            g=shapes.get(i).getHeight();
+//            if(shapes.get(i).getX()>shapes.get(i).getY())
+//            {
+//                grade++;
+//            }
+//            if(shapes.get(i).getLength()>30)
+//            {
+//                grade++;
+//            }
+//            if(shapes.get(i).getSelector()==0)
+//            {
+//                patrat++;
+//            }
+//            
+//            else
+//            {
+//                triunghi++;
+//            }
+//        }
+//        if(triunghi<=2 || patrat<=2)
+//        {
+//            grade=grade+10;
+//        }
+//        if (k<6  || k == 0) {
+//            if (grade == 0) {
+//                grade = 0;
+//
+//            } else {
+//                grade--;
+//            }
+//        } else {
+//            grade++;
+//        }
 
         return grade;
 
     }
     public void bubbleSort(ArrayList<Painting>paintings) {
     int n = paintings.size();
-      System.out.println("SIZE OF ARRAY "+n);
+    //  System.out.println("SIZE OF ARRAY "+n);
     int k=0;
     for (int i = 0; i < 100 - 1; i++) {
         k++;
