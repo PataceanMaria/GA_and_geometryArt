@@ -10,14 +10,35 @@ package geometricarti_better;
  * @author maria
  */
 public final class  Individual {
-    private int height,length,x,y,selector;
+    private int height,length,x,y,selector,color;
+    private float thickness;
 
-    public Individual(int height, int length, int x, int y, int selector) {
+    public Individual(int height, int length, int x, int y, int selector,float thickness,int color) {
         this.height = height;
         this.length = length;
         this.x = x;
         this.y = y;
         this.selector = selector;
+        this.thickness=thickness;
+        this.color=color;
+    }
+
+    public int getColor() {
+        return color;
+    }
+
+    public void setColor(int color) {
+        this.color = color;
+    }
+
+    
+    
+    public float getThickness() {
+        return thickness;
+    }
+
+    public void setThickness(float thickness) {
+        this.thickness = thickness;
     }
 
     public int getHeight() {

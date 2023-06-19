@@ -5,7 +5,10 @@
  */
 package geometricarti_better;
 
+import java.awt.BasicStroke;
+import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -158,14 +161,39 @@ public class Canvas extends javax.swing.JFrame {
         });
 
         jCheckBox2.setText("jCheckBox2");
+        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox2ActionPerformed(evt);
+            }
+        });
 
         jCheckBox3.setText("jCheckBox3");
+        jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox3ActionPerformed(evt);
+            }
+        });
 
         jCheckBox4.setText("jCheckBox4");
+        jCheckBox4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox4ActionPerformed(evt);
+            }
+        });
 
         jCheckBox5.setText("jCheckBox5");
+        jCheckBox5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox5ActionPerformed(evt);
+            }
+        });
 
         jCheckBox6.setText("jCheckBox6");
+        jCheckBox6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -274,6 +302,12 @@ public class Canvas extends javax.swing.JFrame {
             paintings.add(new Painting(grades));
 
         }
+        for (int i = 0; i < 100; i++) {
+            shapes = paintings.get(i).getShapes();
+            paintings.get(i).setGrades(creation.fittness(shapes));
+            //System.out.println("gardes " + paintings.get(i).getGrades());
+        }
+
         Graphics g = jPanel1.getGraphics();
 
         painting = paintings.get(0);
@@ -305,6 +339,13 @@ public class Canvas extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         repaint();
+        System.out.println(jPanel1.getHeight()+" "+jPanel1.getWidth());
+        System.out.println(jPanel2.getHeight()+" "+jPanel2.getWidth());
+        System.out.println(jPanel3.getHeight()+" "+jPanel3.getWidth());
+        System.out.println(jPanel4.getHeight()+" "+jPanel4.getWidth());
+        System.out.println(jPanel5.getHeight()+" "+jPanel5.getWidth());
+        System.out.println(jPanel6.getHeight()+" "+jPanel6.getWidth());
+        
 
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -314,9 +355,20 @@ public class Canvas extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
 
+       
+            
         jCheckBox1.setSelected(false);
+        jCheckBox2.setSelected(false);
+        jCheckBox3.setSelected(false);
+        jCheckBox4.setSelected(false);
+        jCheckBox5.setSelected(false);
+        jCheckBox6.setSelected(false); 
+        if(paintings==null)
+            System.out.println("Nu exista generatie de inceput");
+        else{
+
         int k = 0;
-        while (k < 100) {
+        while (k < 1000) {
 
             k++;
 
@@ -326,19 +378,15 @@ public class Canvas extends javax.swing.JFrame {
             secondchild = new ArrayList<>();
             newpaintings.clear();
             newpaintings2.clear();
-            for (int i = 0; i < 100; i++) {
-                shapes = paintings.get(i).getShapes();
-                paintings.get(i).setGrades(creation.fittness(shapes));
-                //System.out.println("gardes " + paintings.get(i).getGrades());
-            }
 
             for (int i = 0; i < 100; i++) {
                 newpaintings.add(new Painting(grades));
                 newpaintings2.add(new Painting(grades));
 
             }
-
             creation.bubbleSort(paintings);
+
+            System.out.println("first garde :" + paintings.get(0).getGrades());
 
             for (int i = 0; i < 100; i++) {
                 shapes = paintings.get(i).getShapes();
@@ -377,6 +425,10 @@ public class Canvas extends javax.swing.JFrame {
                     shapes.get(j).setX(firstchild.get(j).getX());
                     shapes.get(j).setY(firstchild.get(j).getY());
                     shapes.get(j).setSelector(firstchild.get(j).getSelector());
+                    shapes.get(j).setThickness(firstchild.get(j).getThickness());
+                    shapes.get(j).setColor(firstchild.get(j).getColor());
+                    
+                    
 
                 }
 
@@ -390,6 +442,8 @@ public class Canvas extends javax.swing.JFrame {
                     second.get(j).setX(secondchild.get(j).getX());
                     second.get(j).setY(secondchild.get(j).getY());
                     second.get(j).setSelector(secondchild.get(j).getSelector());
+                    second.get(j).setThickness(secondchild.get(j).getThickness());
+                    second.get(j).setColor(secondchild.get(j).getColor());
 
                 }
 
@@ -399,6 +453,10 @@ public class Canvas extends javax.swing.JFrame {
             paintings.clear();
             paintings.addAll(newpaintings.subList(0, limit / 2));
             paintings.addAll(newpaintings2.subList(0, limit / 2));
+            for (int i = 0; i < 100; i++) {
+                shapes = paintings.get(i).getShapes();
+                paintings.get(i).setGrades(creation.fittness(shapes));
+            }
 
 //            for (int i = 0; i < 100; i++) {
 //                second = paintings.get(i).getShapes();
@@ -409,10 +467,7 @@ public class Canvas extends javax.swing.JFrame {
 //                System.out.print("\n");
 //            }
         }
-        for (int i = 0; i < 100; i++) {
-            shapes = paintings.get(i).getShapes();
-            paintings.get(i).setGrades(creation.fittness(shapes));
-        }
+
         creation.bubbleSort(paintings);
         for (int i = 0; i < 100; i++) {
             second = paintings.get(i).getShapes();
@@ -430,6 +485,12 @@ public class Canvas extends javax.swing.JFrame {
         Graphics g3 = jPanel4.getGraphics();
         Graphics g4 = jPanel5.getGraphics();
         Graphics g5 = jPanel6.getGraphics();
+        Graphics2D G1 = (Graphics2D) g;
+        Graphics2D G2 = (Graphics2D) g1;
+        Graphics2D G3 = (Graphics2D) g2;
+        Graphics2D G4 = (Graphics2D) g3;
+        Graphics2D G5 = (Graphics2D) g4;
+        Graphics2D G6 = (Graphics2D) g5;
         painting = paintings.get(0);
         shapes = painting.getShapes();
         second = paintings.get(1).getShapes();
@@ -437,124 +498,236 @@ public class Canvas extends javax.swing.JFrame {
         forth = paintings.get(3).getShapes();
         fifth = paintings.get(4).getShapes();
         sixth = paintings.get(5).getShapes();
+       for (int i = 0; i < 6; i++) {
+    switch (shapes.get(i).getSelector()) {
+        case 0:
+            Graphics2D gRect = (Graphics2D)G1.create(); // Create a new Graphics object for each shape
+            creation.colorCenerator(gRect, shapes.get(i).getColor());
+            gRect.setStroke(new BasicStroke(shapes.get(i).getThickness()));
+            gRect.drawRect(shapes.get(i).getX(), shapes.get(i).getY(), shapes.get(i).getHeight(), shapes.get(i).getLength());
+            gRect.dispose(); // Dispose the Graphics object after drawing the shape
+            break;
+        case 1:
+            Graphics2D gOval = (Graphics2D)G1.create(); // Create a new Graphics object for each shape
+            creation.colorCenerator(gOval, shapes.get(i).getColor());
+            gOval.setStroke(new BasicStroke(shapes.get(i).getThickness()));
+            gOval.drawOval(shapes.get(i).getX(), shapes.get(i).getY(), shapes.get(i).getHeight(), shapes.get(i).getLength());
+            gOval.dispose(); // Dispose the Graphics object after drawing the shape
+            break;
+        case 2:
+            Graphics2D gTriangle = (Graphics2D)G1.create(); // Create a new Graphics object for each shape
+            creation.colorCenerator(gTriangle, shapes.get(i).getColor());
+            gTriangle.setStroke(new BasicStroke(shapes.get(i).getThickness()));
+            triangle.drawTraingle(gTriangle, shapes.get(i).getX(), shapes.get(i).getY(), shapes.get(i).getHeight(), shapes.get(i).getLength());
+            gTriangle.dispose(); // Dispose the Graphics object after drawing the shape
+            break;
+    }
+       }
         for (int i = 0; i < 6; i++) {
-            switch (shapes.get(i).getSelector()) {
-
-                case 0:
-
-                    g.drawRect(shapes.get(i).getX(), shapes.get(i).getY(), shapes.get(i).getHeight(), shapes.get(i).getLength());
-
-                    break;
-                case 1:
-                    g.drawOval(shapes.get(i).getX(), shapes.get(i).getY(), shapes.get(i).getHeight(), shapes.get(i).getLength());
-                    break;
-                case 2:
-                    triangle.drawTraingle(g, second.get(i).getX(), second.get(i).getY(), second.get(i).getHeight(), second.get(i).getLength());
-
-            }
-
-            System.out.println(" X : " + shapes.get(i).getX() + "  " + "Y" + shapes.get(i).getY());
-        }
+    switch (second.get(i).getSelector()) {
+        case 0:
+            Graphics2D gRect = (Graphics2D) G2.create();
+            gRect.setStroke(new BasicStroke(second.get(i).getThickness()));
+            creation.colorCenerator(gRect, second.get(i).getColor());
+            gRect.drawRect(second.get(i).getX(), second.get(i).getY(), second.get(i).getHeight(), second.get(i).getLength());
+            gRect.dispose();
+            break;
+        case 1:
+            Graphics2D gOval = (Graphics2D) G2.create();
+            gOval.setStroke(new BasicStroke(second.get(i).getThickness()));
+            creation.colorCenerator(gOval, second.get(i).getColor());
+            gOval.drawOval(second.get(i).getX(), second.get(i).getY(), second.get(i).getHeight(), second.get(i).getLength());
+            gOval.dispose();
+            break;
+        case 2:
+            Graphics2D gTriangle = (Graphics2D) G2.create();
+            gTriangle.setStroke(new BasicStroke(second.get(i).getThickness()));
+            creation.colorCenerator(gTriangle, second.get(i).getColor());
+            triangle.drawTraingle(gTriangle, second.get(i).getX(), second.get(i).getY(), second.get(i).getHeight(), second.get(i).getLength());
+            gTriangle.dispose();
+            break;
+    }
+}
+       for (int i = 0; i < 6; i++) {
+    switch (third.get(i).getSelector()) {
+        case 0:
+            Graphics2D gRect = (Graphics2D) G3.create();
+            gRect.setStroke(new BasicStroke(third.get(i).getThickness()));
+            creation.colorCenerator(gRect, third.get(i).getColor());
+            gRect.drawRect(third.get(i).getX(), third.get(i).getY(), third.get(i).getHeight(), third.get(i).getLength());
+            gRect.dispose();
+            break;
+        case 1:
+            Graphics2D gOval = (Graphics2D) G3.create();
+            gOval.setStroke(new BasicStroke(third.get(i).getThickness()));
+            creation.colorCenerator(gOval, third.get(i).getColor());
+            gOval.drawOval(third.get(i).getX(), third.get(i).getY(), third.get(i).getHeight(), third.get(i).getLength());
+            gOval.dispose();
+            break;
+        case 2:
+            Graphics2D gTriangle = (Graphics2D) G3.create();
+            gTriangle.setStroke(new BasicStroke(third.get(i).getThickness()));
+            creation.colorCenerator(gTriangle, third.get(i).getColor());
+            triangle.drawTraingle(gTriangle, third.get(i).getX(), third.get(i).getY(), third.get(i).getHeight(), third.get(i).getLength());
+            gTriangle.dispose();
+            break;
+    }
+}
+       for (int i = 0; i < 6; i++) {
+    switch (forth.get(i).getSelector()) {
+        case 0:
+            Graphics2D gRect = (Graphics2D) G4.create();
+            gRect.setStroke(new BasicStroke(forth.get(i).getThickness()));
+            creation.colorCenerator(gRect, forth.get(i).getColor());
+            gRect.drawRect(forth.get(i).getX(), forth.get(i).getY(), forth.get(i).getHeight(), forth.get(i).getLength());
+            gRect.dispose();
+            break;
+        case 1:
+            Graphics2D gOval = (Graphics2D) G4.create();
+            gOval.setStroke(new BasicStroke(forth.get(i).getThickness()));
+            creation.colorCenerator(gOval, forth.get(i).getColor());
+            gOval.drawOval(forth.get(i).getX(), forth.get(i).getY(), forth.get(i).getHeight(), forth.get(i).getLength());
+            gOval.dispose();
+            break;
+        case 2:
+            Graphics2D gTriangle = (Graphics2D) G4.create();
+            gTriangle.setStroke(new BasicStroke(forth.get(i).getThickness()));
+            creation.colorCenerator(gTriangle, forth.get(i).getColor());
+            triangle.drawTraingle(gTriangle, forth.get(i).getX(), forth.get(i).getY(), forth.get(i).getHeight(), forth.get(i).getLength());
+            gTriangle.dispose();
+            break;
+    }
+}
         for (int i = 0; i < 6; i++) {
-            switch (second.get(i).getSelector()) {
-
-                case 0:
-
-                    g1.drawRect(second.get(i).getX(), second.get(i).getY(), second.get(i).getHeight(), second.get(i).getLength());
-
-                    break;
-                case 1:
-                    g1.drawOval(second.get(i).getX(), second.get(i).getY(), second.get(i).getHeight(), second.get(i).getLength());
-                    break;
-                case 2:
-                    triangle.drawTraingle(g1, second.get(i).getX(), second.get(i).getY(), second.get(i).getHeight(), second.get(i).getLength());
-
-            }
-
-        }
+    switch (fifth.get(i).getSelector()) {
+        case 0:
+            Graphics2D gRect = (Graphics2D) G5.create();
+            gRect.setStroke(new BasicStroke(fifth.get(i).getThickness()));
+           creation.colorCenerator(gRect, fifth.get(i).getColor());
+            gRect.drawRect(fifth.get(i).getX(), fifth.get(i).getY(), fifth.get(i).getHeight(), fifth.get(i).getLength());
+            gRect.dispose();
+            break;
+        case 1:
+            Graphics2D gOval = (Graphics2D) G5.create();
+            gOval.setStroke(new BasicStroke(fifth.get(i).getThickness()));
+          creation.colorCenerator(gOval, fifth.get(i).getColor());
+            gOval.drawOval(fifth.get(i).getX(), fifth.get(i).getY(), fifth.get(i).getHeight(), fifth.get(i).getLength());
+            gOval.dispose();
+            break;
+        case 2:
+            Graphics2D gTriangle = (Graphics2D) G5.create();
+            gTriangle.setStroke(new BasicStroke(fifth.get(i).getThickness()));
+            creation.colorCenerator(gTriangle, fifth.get(i).getColor());
+            triangle.drawTraingle(gTriangle, fifth.get(i).getX(), fifth.get(i).getY(), fifth.get(i).getHeight(), fifth.get(i).getLength());
+            gTriangle.dispose();
+            break;
+    }
+}
         for (int i = 0; i < 6; i++) {
-            switch (third.get(i).getSelector()) {
-
-                case 0:
-
-                    g2.drawRect(third.get(i).getX(), third.get(i).getY(), third.get(i).getHeight(), third.get(i).getLength());
-
-                    break;
-                case 1:
-                    g2.drawOval(third.get(i).getX(), third.get(i).getY(), third.get(i).getHeight(), third.get(i).getLength());
-                    break;
-                case 2:
-                    triangle.drawTraingle(g2, third.get(i).getX(), third.get(i).getY(), third.get(i).getHeight(), third.get(i).getLength());
-
-            }
-
+    switch (sixth.get(i).getSelector()) {
+        case 0:
+            Graphics2D gRect = (Graphics2D) G6.create();
+            gRect.setStroke(new BasicStroke(sixth.get(i).getThickness()));
+            creation.colorCenerator(gRect, sixth.get(i).getColor());
+            gRect.drawRect(sixth.get(i).getX(), sixth.get(i).getY(), sixth.get(i).getHeight(), sixth.get(i).getLength());
+            gRect.dispose();
+            break;
+        case 1:
+            Graphics2D gOval = (Graphics2D)  G6.create();
+            gOval.setStroke(new BasicStroke(sixth.get(i).getThickness()));
+            creation.colorCenerator(gOval, sixth.get(i).getColor());
+            gOval.drawOval(sixth.get(i).getX(), sixth.get(i).getY(), sixth.get(i).getHeight(), sixth.get(i).getLength());
+            gOval.dispose();
+            break;
+        case 2:
+            Graphics2D gTriangle = (Graphics2D)  G6.create();
+            gTriangle.setStroke(new BasicStroke(sixth.get(i).getThickness()));
+            creation.colorCenerator(gTriangle, sixth.get(i).getColor());
+            triangle.drawTraingle(gTriangle, sixth.get(i).getX(), sixth.get(i).getY(), sixth.get(i).getHeight(), sixth.get(i).getLength());
+            gTriangle.dispose();
+            break;
+    }
+}
         }
-        for (int i = 0; i < 6; i++) {
-            switch (forth.get(i).getSelector()) {
-
-                case 0:
-
-                    g3.drawRect(forth.get(i).getX(), forth.get(i).getY(), forth.get(i).getHeight(), forth.get(i).getLength());
-
-                    break;
-                case 1:
-                    g3.drawOval(forth.get(i).getX(), forth.get(i).getY(), forth.get(i).getHeight(), forth.get(i).getLength());
-                    break;
-                case 2:
-                    triangle.drawTraingle(g3, forth.get(i).getX(), forth.get(i).getY(), forth.get(i).getHeight(), forth.get(i).getLength());
-
-            }
-
-        }
-        for (int i = 0; i < 6; i++) {
-            switch (fifth.get(i).getSelector()) {
-
-                case 0:
-
-                    g4.drawRect(fifth.get(i).getX(), fifth.get(i).getY(), fifth.get(i).getHeight(), fifth.get(i).getLength());
-
-                    break;
-                case 1:
-                    g4.drawOval(fifth.get(i).getX(), fifth.get(i).getY(), fifth.get(i).getHeight(), fifth.get(i).getLength());
-                    break;
-                case 2:
-                    triangle.drawTraingle(g4, fifth.get(i).getX(), fifth.get(i).getY(), fifth.get(i).getHeight(), fifth.get(i).getLength());
-
-            }
-
-        }
-        for (int i = 0; i < 6; i++) {
-            switch (sixth.get(i).getSelector()) {
-
-                case 0:
-
-                    g5.drawRect(sixth.get(i).getX(), sixth.get(i).getY(), sixth.get(i).getHeight(), sixth.get(i).getLength());
-
-                    break;
-                case 1:
-                    g5.drawOval(sixth.get(i).getX(), sixth.get(i).getY(), sixth.get(i).getHeight(), sixth.get(i).getLength());
-                    break;
-                case 2:
-                    triangle.drawTraingle(g5, sixth.get(i).getX(), sixth.get(i).getY(), sixth.get(i).getHeight(), sixth.get(i).getLength());
-
-            }
-
-        }
-
 
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
         if (jCheckBox1.isSelected()) {
-            System.out.println("gardes" + paintings.get(0).getGrades());
+            System.out.println("gardes " + paintings.get(0).getGrades());
             paintings.get(0).setGrades(paintings.get(0).getGrades() + 20);
-            System.out.println("gardes+10" + paintings.get(0).getGrades());
+            System.out.println("gardes+10 " + paintings.get(0).getGrades());
         } else {
-            System.out.println("gardes" + paintings.get(0).getGrades());
+            System.out.println("gardes " + paintings.get(0).getGrades());
             paintings.get(0).setGrades(paintings.get(0).getGrades() - 20);
-            System.out.println("gardes+10" + paintings.get(0).getGrades());
+            System.out.println("gardes+10 " + paintings.get(0).getGrades());
         }
     }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
+        // TODO add your handling code here:
+        if (jCheckBox2.isSelected()) {
+            System.out.println("gardes" + paintings.get(1).getGrades());
+            paintings.get(1).setGrades(paintings.get(1).getGrades() + 20);
+            System.out.println("gardes+10" + paintings.get(1).getGrades());
+        } else {
+            System.out.println("gardes" + paintings.get(1).getGrades());
+            paintings.get(1).setGrades(paintings.get(1).getGrades() - 20);
+            System.out.println("gardes+10" + paintings.get(1).getGrades());
+        }
+    }//GEN-LAST:event_jCheckBox2ActionPerformed
+
+    private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
+        // TODO add your handling code here:
+        if (jCheckBox3.isSelected()) {
+            System.out.println("gardes" + paintings.get(2).getGrades());
+            paintings.get(2).setGrades(paintings.get(2).getGrades() + 20);
+            System.out.println("gardes+10" + paintings.get(2).getGrades());
+        } else {
+            System.out.println("gardes" + paintings.get(2).getGrades());
+            paintings.get(2).setGrades(paintings.get(2).getGrades() - 20);
+            System.out.println("gardes+10" + paintings.get(2).getGrades());
+        }
+    }//GEN-LAST:event_jCheckBox3ActionPerformed
+
+    private void jCheckBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox4ActionPerformed
+        // TODO add your handling code here:
+        if (jCheckBox4.isSelected()) {
+            System.out.println("gardes" + paintings.get(3).getGrades());
+            paintings.get(3).setGrades(paintings.get(3).getGrades() + 20);
+            System.out.println("gardes+10" + paintings.get(3).getGrades());
+        } else {
+            System.out.println("gardes" + paintings.get(3).getGrades());
+            paintings.get(3).setGrades(paintings.get(3).getGrades() - 20);
+            System.out.println("gardes+10" + paintings.get(3).getGrades());
+        }
+    }//GEN-LAST:event_jCheckBox4ActionPerformed
+
+    private void jCheckBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox5ActionPerformed
+        // TODO add your handling code here:
+        if (jCheckBox5.isSelected()) {
+            System.out.println("gardes" + paintings.get(4).getGrades());
+            paintings.get(4).setGrades(paintings.get(4).getGrades() + 20);
+            System.out.println("gardes+10" + paintings.get(4).getGrades());
+        } else {
+            System.out.println("gardes" + paintings.get(4).getGrades());
+            paintings.get(4).setGrades(paintings.get(4).getGrades() - 20);
+            System.out.println("gardes+10" + paintings.get(4).getGrades());
+        }
+    }//GEN-LAST:event_jCheckBox5ActionPerformed
+
+    private void jCheckBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox6ActionPerformed
+        // TODO add your handling code here:
+        if (jCheckBox6.isSelected()) {
+            System.out.println("gardes" + paintings.get(5).getGrades());
+            paintings.get(5).setGrades(paintings.get(5).getGrades() + 20);
+            System.out.println("gardes+10" + paintings.get(5).getGrades());
+        } else {
+            System.out.println("gardes" + paintings.get(5).getGrades());
+            paintings.get(5).setGrades(paintings.get(5).getGrades() - 20);
+            System.out.println("gardes+10" + paintings.get(5).getGrades());
+        }
+    }//GEN-LAST:event_jCheckBox6ActionPerformed
 
     /**
      * @param args the command line arguments

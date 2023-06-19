@@ -22,12 +22,14 @@ public class Painting {
         shapes=new ArrayList<Individual>(6);
         for(int i=0;i<6;i++)
         {
-            int height=random.nextInt(100)+1;
-            int length=random.nextInt(100)+1;
-            int x=random.nextInt(100)+1;
-            int y=random.nextInt(100)+1;
+            int height=random.nextInt(1000)+1;
+            int length=random.nextInt(1000)+1;
+            int x=random.nextInt(2000)+1;
+            int y=random.nextInt(2000)+1;
+            float thickness=random.nextFloat()*5.0f;
             int selector=random.nextInt(3);
-            shapes.add(new Individual(height, length,  x,  y,selector));
+            int color=random.nextInt(8);
+            shapes.add(new Individual(height, length,  x,  y,selector,thickness,color));
         }
     }
     

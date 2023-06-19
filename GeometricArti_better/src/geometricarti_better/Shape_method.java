@@ -30,8 +30,8 @@ public class Shape_method extends JPanel{
     {
         super.paintComponent(g);
         Random random=new Random(); 
-      int additonal=random.nextInt(100);
-      int additonal2=random.nextInt(100);
+      int additonal=random.nextInt(50);
+      int additonal2=random.nextInt(50);
       
       
       g.drawLine(coordinatex, coordinatey, coordinatex+additonal, coordinatey+additonal2);
