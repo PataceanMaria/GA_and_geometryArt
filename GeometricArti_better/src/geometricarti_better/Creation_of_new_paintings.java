@@ -119,17 +119,24 @@ public class Creation_of_new_paintings extends JPanel {
                 else
                     grade--;
             }
+           
+        }
+        for(int i=0;i<5;i++)
+        {
+            if(shapes.get(5).getThickness()>shapes.get(i).getThickness())
+                grade++;
+            if(shapes.get(5).getHeight()-shapes.get(i).getHeight()>=20||shapes.get(i).getHeight()-shapes.get(5).getHeight()>=20)
+                grade=grade+5;
+            if(shapes.get(5).getLength()-shapes.get(i).getLength()>=20||shapes.get(i).getLength()-shapes.get(5).getLength()>=20)
+                grade=grade+5;
+            
         }
             
         if(k==1&&shapes.get(5).getColor()==7&&k2==0&&k3==0)
             grade=grade+5;
         else if(k2==1&&shapes.get(5).getColor()==5&&k==0&&k3==0)
             grade=grade+5;
-        else if(k3==1&&shapes.get(5).getColor()==6&&k2==0&&k==0)
-            grade=grade+5;
-      
-            
-      
+       
            
         return grade;
 

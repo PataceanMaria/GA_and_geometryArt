@@ -34,8 +34,8 @@ public class Shape_method extends JPanel{
       int additonal2=random.nextInt(50);
       
       
-      g.drawLine(coordinatex, coordinatey, coordinatex+additonal, coordinatey+additonal2);
-      g.drawLine(coordinatex+additonal, coordinatey+additonal2, height,length);
+      g.drawLine(coordinatex, coordinatey, coordinatex+height, coordinatey+height);
+      g.drawLine(coordinatex+height, coordinatey+height, height,length);
       g.drawLine( height,length, coordinatex, coordinatey);
       
     
