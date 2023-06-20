@@ -40,4 +40,7 @@ public class Shape_method extends JPanel{
       
     
     }
+        
+      
+        
 }
