@@ -94,15 +94,19 @@ public class Creation_of_new_paintings extends JPanel {
 
         int grade=0;
         int k=0,k2=0,k3=0,k4=0;
+         double centerofGravityX=shapes.get(5).getX()+shapes.get(5).getHeight()/2;
+          double centerofGravityY=shapes.get(5).getY()+shapes.get(5).getLength()/2;
         for(int i=0;i<6;i++)
         {
+            
+            
             if(shapes.get(i).getColor()==7)
                k++;
             if(shapes.get(i).getColor()==5)
                k2++;
-            if(shapes.get(i).getColor()==6)
+            if(shapes.get(i).getColor()==3)
                k3++;
-            if(shapes.get(i).getX() +shapes.get(i).getHeight()<=257&& shapes.get(i).getY()+shapes.get(i).getLength()<=159)
+            if(shapes.get(i).getX() +shapes.get(i).getHeight()<=300&& shapes.get(i).getY()+shapes.get(i).getLength()<=215)
                 grade++;
             else
             {
@@ -119,23 +123,124 @@ public class Creation_of_new_paintings extends JPanel {
                 else
                     grade--;
             }
+            
+          // int ovalCenterX = ovalUpperLeftX + ovalWidth / 2;
+           // int ovalCenterY = ovalUpperLeftY + ovalHeight / 2;
+          
+            
+            
+
            
         }
+         
+
         for(int i=0;i<5;i++)
+            
         {
+            double individualGravityX=shapes.get(i).getX()+shapes.get(i).getHeight()/2;
+            double individualGravityY=shapes.get(i).getY()+shapes.get(i).getLength()/2;
+            double gravityDifferenceX= centerofGravityX-individualGravityX;
+            double gravityDifferenceY=centerofGravityY-individualGravityY;
+            double reversedGravityX=individualGravityX-centerofGravityX;
+            double reversedGravityY=individualGravityY-centerofGravityY;
+            
+            
             if(shapes.get(5).getThickness()>shapes.get(i).getThickness())
                 grade++;
-            if(shapes.get(5).getHeight()-shapes.get(i).getHeight()>=10||shapes.get(i).getHeight()-shapes.get(5).getHeight()>=10)
-                grade=grade+5;
-            if(shapes.get(5).getLength()-shapes.get(i).getLength()>=10||shapes.get(i).getLength()-shapes.get(5).getLength()>=10)
-                grade=grade+5;
+            else
+                if(grade==0)
+                    grade=0;
+            else
+                    grade--;
             
+            if(shapes.get(5).getHeight()<shapes.get(i).getHeight()&&shapes.get(5).getLength()<shapes.get(i).getLength())
+            {
+                 grade=grade++;
+            } 
+            else if(shapes.get(5).getHeight()>shapes.get(i).getHeight()&&shapes.get(5).getLength()>shapes.get(i).getLength())
+            {
+                 grade=grade++;
+            } 
+               
+         
+          else if(grade==0)
+              grade=0;
+            else
+              grade--;
+            
+            if(gravityDifferenceX>=0.5&&gravityDifferenceY>=0.5)
+            
+                grade=grade+10;
+            else if(reversedGravityX>=0.5&&reversedGravityY>=0.5)
+                grade=grade+10;
+            else grade=grade-grade;
+          
+    
+
+          
         }
             
         if(k==1&&shapes.get(5).getColor()==7&&k2==0&&k3==0)
             grade=grade+5;
-        else if(k2==1&&shapes.get(5).getColor()==5&&k==0&&k3==0)
+        if(k2==1&&shapes.get(5).getColor()==5&&k==0&&k3==0)
             grade=grade+5;
+        else if(k3==1&&shapes.get(5).getColor()==3&&k2==0&&k==0)
+            grade=grade+5;
+        
+       
+        
+            
+//                if(centerofGravityX-85<=5&&centerofGravityY-53<=5||85-centerofGravityX<=5&&53-centerofGravityY<=5)
+//                    grade++;
+//                else if(centerofGravityX-85<=3&&centerofGravityY-53<=3||85-centerofGravityX<=3&&53-centerofGravityY<=3)
+//                    grade=grade+3;
+//                else if(centerofGravityX-85<=1&&centerofGravityY-53<=1||85-centerofGravityX<=1&&53-centerofGravityY<=1)
+//                    grade=grade+5;
+                if(centerofGravityX-85<=1&&centerofGravityY-53<=1||85-centerofGravityX<=1&&53-centerofGravityY<=1)
+                    grade=grade+10;
+               else if(centerofGravityX-85<=0.5&&centerofGravityY-53<=0.5||85-centerofGravityX<=0.5&&53-centerofGravityY<=0.5)
+                    grade=grade+15;
+                else if(centerofGravityX-85==0&&centerofGravityY-53==0||85-centerofGravityX==0&&53-centerofGravityY==0)
+                    grade=grade+20;
+//                else if(centerofGravityX-85<=5&&centerofGravityY-106<=5||85-centerofGravityX<=5&&106-centerofGravityY<=5)
+//                    grade++;
+//                else if(centerofGravityX-85<=3&&centerofGravityY-106<=3||85-centerofGravityX<=3&&106-centerofGravityY<=3)
+//                    grade=grade+3;
+//                else if(centerofGravityX-85<=1&&centerofGravityY-106<=1||85-centerofGravityX<=1&&106-centerofGravityY<=1)
+//                    grade=grade+5;
+                else if(centerofGravityX-85<=1&&centerofGravityY-106<=1||85-centerofGravityX<=1&&106-centerofGravityY<=1)
+                    grade=grade+10;
+                else if(centerofGravityX-85<=0.5&&centerofGravityY-106<=0.5||85-centerofGravityX<=0.5&&106-centerofGravityY<=0.5)
+                    grade=grade+15;
+                 else if(centerofGravityX-85==0&&centerofGravityY-106==0||85-centerofGravityX==0&&106-centerofGravityY==0)
+                    grade=grade+20;
+                
+//                else if(centerofGravityX-170<=5&&centerofGravityY-53<=5||170-centerofGravityX<=5&&53-centerofGravityY<=5)
+//                    grade++;
+//                else if(centerofGravityX-170<=3&&centerofGravityY-53<=3||170-centerofGravityX<=3&&53-centerofGravityY<=3)
+//                    grade=grade+3;
+//                else if(centerofGravityX-170<=1&&centerofGravityY-53<=1||170-centerofGravityX<=1&&53-centerofGravityY<=1)
+//                    grade=grade+5;
+                else if(centerofGravityX-170<=1&&centerofGravityY-53<=1||170-centerofGravityX<=1&&53-centerofGravityY<=1)
+                    grade=grade+10;
+                 else if(centerofGravityX-170<=0.5&&centerofGravityY-53<=0.5||170-centerofGravityX<=0.5&&53-centerofGravityY<=0.5)
+                    grade=grade+15;
+                 else if(centerofGravityX-170==0&&centerofGravityY-53==0||170-centerofGravityX==0&&53-centerofGravityY==0)
+                    grade=grade+20;
+//                 else if(centerofGravityX-170<=5&&centerofGravityY-106<=5||170-centerofGravityX<=5&&106-centerofGravityY<=5)
+//                    grade++;
+//                else if(centerofGravityX-170<=3&&centerofGravityY-106<=3||170-centerofGravityX<=3&&106-centerofGravityY<=3)
+//                    grade=grade+3;
+//                else if(centerofGravityX-170<=1&&centerofGravityY-106<=1||170-centerofGravityX<=1&&106-centerofGravityY<=1)
+//                    grade=grade+5;
+                else if(centerofGravityX-170<=1&&centerofGravityY-106<=1||170-centerofGravityX<=1&&106-centerofGravityY<=1)
+                    grade=grade+10;
+                else if(centerofGravityX-170<=0.5&&centerofGravityY-106<=0.5||170-centerofGravityX<=0.5&&106-centerofGravityY<=0.5)
+                    grade=grade+15;
+                else if(centerofGravityX-170==0&&centerofGravityY-106==0||170-centerofGravityX==0&&106-centerofGravityY==0)
+                    grade=grade+20;
+                else grade=grade-grade;
+            
        
            
         return grade;

@@ -13,34 +13,55 @@ import javax.swing.JPanel;
  *
  * @author maria
  */
-public class Shape_method extends JPanel{
-    Random random=new Random();
+public class Shape_method extends JPanel {
 
-  
+    Random random = new Random();
 
-         int height;
-        int lenght;
-        int x;
-        int y;
-         int height2=random.nextInt(100);
-        int lenght2=random.nextInt(100);
-        int x2=random.nextInt(100);
-        int y2=random.nextInt(100);
-        public void drawTraingle(Graphics g,int coordinatex,int coordinatey,int height,int length)
-    {
-        super.paintComponent(g);
-        Random random=new Random(); 
-      int additonal=random.nextInt(50);
-      int additonal2=random.nextInt(50);
-      
-      
-      g.drawLine(coordinatex, coordinatey, coordinatex+height, coordinatey+height);
-      g.drawLine(coordinatex+height, coordinatey+height, height,length);
-      g.drawLine( height,length, coordinatex, coordinatey);
-      
-    
+    int height;
+    int lenght;
+    int x;
+    int y;
+    int height2 = random.nextInt(100);
+    int lenght2 = random.nextInt(100);
+    int x2 = random.nextInt(100);
+    int y2 = random.nextInt(100);
+
+    public void drawTraingle(Graphics g, int x, int y, int width, int height) {
+      int x1 = x;
+    int y1 = y + height;
+    int x2 = x + width / 2;
+    int y2 = y;
+    int x3 = x + width;
+    int y3 = y + height;
+    // Draw the triangle
+   
+    g.drawLine(x1, y1, x2, y2);
+    g.drawLine(x2, y2, x3, y3);
+    g.drawLine(x3, y3, x1, y1);
+
     }
-        
-      
-        
+
+    public  void intersetcion(double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4) {
+
+        double slope1 = (y2 - y1) / (x2 - x1);
+        double slope2 = (y4 - y3) / (x4 - x3);
+        double yIntercept1 = y1 - slope1 * x1;
+        double yIntercept2 = y3 - slope2 * x3;
+
+        double x;
+        double y;
+
+        if (Double.isInfinite(slope1)) {
+            x = x1;
+            y = slope2 * x1 + yIntercept2;
+        } else if (Double.isInfinite(slope2)) {
+            x = x3;
+            y = slope1 * x3 + yIntercept1;
+        } else {
+            x = (yIntercept2 - yIntercept1) / (slope1 - slope2);
+            y = slope1 * x + yIntercept1;
+        }
+        System.out.println("Intersection point (x, y): (" + x + ", " + y + ")");
+
+    }
 }

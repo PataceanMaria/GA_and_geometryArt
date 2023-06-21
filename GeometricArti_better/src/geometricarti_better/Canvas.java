@@ -55,72 +55,72 @@ public class Canvas extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 257, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 159, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 257, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 215, Short.MAX_VALUE)
         );
 
-        jPanel3.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel3.setBackground(new java.awt.Color(0, 0, 0));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 257, Short.MAX_VALUE)
+            .addGap(0, 300, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 159, Short.MAX_VALUE)
+            .addGap(0, 215, Short.MAX_VALUE)
         );
 
-        jPanel4.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel4.setBackground(new java.awt.Color(0, 0, 0));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 257, Short.MAX_VALUE)
+            .addGap(0, 300, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 159, Short.MAX_VALUE)
+            .addGap(0, 215, Short.MAX_VALUE)
         );
 
-        jPanel5.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel5.setBackground(new java.awt.Color(0, 0, 0));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 257, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 159, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jPanel6.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel6.setBackground(new java.awt.Color(0, 0, 0));
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -130,7 +130,7 @@ public class Canvas extends javax.swing.JFrame {
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 215, Short.MAX_VALUE)
         );
 
         jButton1.setText("jButton1");
@@ -217,66 +217,59 @@ public class Canvas extends javax.swing.JFrame {
                             .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(50, 50, 50)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(41, 41, 41)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(41, 41, 41)
-                                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(54, 54, 54)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(235, 235, 235)
+                        .addGap(237, 237, 237)
                         .addComponent(jCheckBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(206, 206, 206)
+                        .addGap(271, 271, 271)
+                        .addComponent(jCheckBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(242, 242, 242)
+                        .addComponent(jCheckBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(265, 265, 265)
                         .addComponent(jCheckBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(228, 228, 228)
-                        .addComponent(jCheckBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(189, 189, 189)
-                        .addComponent(jCheckBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(210, 210, 210)
-                        .addComponent(jCheckBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(217, 217, 217)
+                        .addGap(244, 244, 244)
+                        .addComponent(jCheckBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(257, 257, 257)
                         .addComponent(jCheckBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(239, Short.MAX_VALUE))
+                .addContainerGap(444, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(48, 48, 48)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(5, 5, 5)
+                        .addGap(26, 26, 26)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(7, 7, 7)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jCheckBox1)
-                            .addComponent(jCheckBox4))
-                        .addGap(25, 25, 25)
+                            .addComponent(jCheckBox2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jCheckBox2)
-                            .addComponent(jCheckBox5))
-                        .addGap(12, 12, 12)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jCheckBox3)
-                            .addComponent(jCheckBox6)))
+                            .addComponent(jCheckBox4))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(48, 48, 48)
                         .addComponent(jButton1)
                         .addGap(18, 18, 18)
                         .addComponent(jButton2)
@@ -284,7 +277,11 @@ public class Canvas extends javax.swing.JFrame {
                         .addComponent(jButton3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton4)))
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jCheckBox6)
+                    .addComponent(jCheckBox5))
+                .addContainerGap())
         );
 
         pack();
@@ -351,13 +348,13 @@ public class Canvas extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         repaint();
-        System.out.println(jPanel1.getHeight()+" "+jPanel1.getWidth());
-        System.out.println(jPanel2.getHeight()+" "+jPanel2.getWidth());
-        System.out.println(jPanel3.getHeight()+" "+jPanel3.getWidth());
-        System.out.println(jPanel4.getHeight()+" "+jPanel4.getWidth());
-        System.out.println(jPanel5.getHeight()+" "+jPanel5.getWidth());
-        System.out.println(jPanel6.getHeight()+" "+jPanel6.getWidth());
-        
+        System.out.println(jPanel1.getHeight() + " " + jPanel1.getWidth());
+        System.out.println(jPanel2.getHeight() + " " + jPanel2.getWidth());
+        System.out.println(jPanel3.getHeight() + " " + jPanel3.getWidth());
+        System.out.println(jPanel4.getHeight() + " " + jPanel4.getWidth());
+        System.out.println(jPanel5.getHeight() + " " + jPanel5.getWidth());
+        System.out.println(jPanel6.getHeight() + " " + jPanel6.getWidth());
+
 
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -367,108 +364,104 @@ public class Canvas extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
 
-       
-            
         jCheckBox1.setSelected(false);
         jCheckBox2.setSelected(false);
         jCheckBox3.setSelected(false);
         jCheckBox4.setSelected(false);
         jCheckBox5.setSelected(false);
-        jCheckBox6.setSelected(false); 
-        if(paintings==null)
+        jCheckBox6.setSelected(false);
+        if (paintings == null) {
             System.out.println("Nu exista generatie de inceput");
-        else{
+        } else {
 
-        int k = 0;
-        while (k < 1000) {
+            int k = 0;
+            while (k < 1000) {
 
-            k++;
+                k++;
 
-            firstparent = new ArrayList<>();
-            secondparent = new ArrayList<>();
-            firstchild = new ArrayList<>();
-            secondchild = new ArrayList<>();
-            newpaintings.clear();
-            newpaintings2.clear();
+                firstparent = new ArrayList<>();
+                secondparent = new ArrayList<>();
+                firstchild = new ArrayList<>();
+                secondchild = new ArrayList<>();
+                newpaintings.clear();
+                newpaintings2.clear();
 
-            for (int i = 0; i < 100; i++) {
-                newpaintings.add(new Painting(grades));
-                newpaintings2.add(new Painting(grades));
+                for (int i = 0; i < 100; i++) {
+                    newpaintings.add(new Painting(grades));
+                    newpaintings2.add(new Painting(grades));
 
-            }
-            creation.bubbleSort(paintings);
+                }
+                creation.bubbleSort(paintings);
 
-            System.out.println("first garde :" + paintings.get(0).getGrades());
+                System.out.println("first garde :" + paintings.get(0).getGrades());
 
-            for (int i = 0; i < 100; i++) {
-                shapes = paintings.get(i).getShapes();
+                for (int i = 0; i < 100; i++) {
+                    shapes = paintings.get(i).getShapes();
 //                System.out.println("paitning :" + i);
 //                for (int j = 0; j < 6; j++) {
 //                    System.out.print("  " + shapes.get(j).getHeight());
 //                }
 //                System.out.println(" \n");
-            }
+                }
 
-            for (int i = 0; i < 50; i++) {
-                firstparent.clear();
-                firstparent.addAll(creation.selection(paintings));
+                for (int i = 0; i < 50; i++) {
+                    firstparent.clear();
+                    firstparent.addAll(creation.selection(paintings));
 
 //                for (int j = 0; j < 6; j++) {
 //                    System.out.print(firstparent.get(j).getHeight() + "  ");
 //                }
 //                System.out.println(" \n");
-                secondparent.clear();
-                secondparent.addAll(creation.selection(paintings));
+                    secondparent.clear();
+                    secondparent.addAll(creation.selection(paintings));
 
 //                for (int j = 0; j < 6; j++) {
 //                    System.out.print(secondparent.get(j).getHeight() + "  ");
 //                }
 //                System.out.println(" \n");
-                shapes = newpaintings.get(i).getShapes();
+                    shapes = newpaintings.get(i).getShapes();
 
-                creation.crossover(firstparent, secondparent, firstchild);
-                creation.mutation(firstchild);
-                //  System.out.println("Paitning " + i);
-                for (int j = 0; j < 6; j++) {
-                    //System.out.println("child1 " + firstchild.get(j).getHeight());
-                    shapes.get(j).setHeight(firstchild.get(j).getHeight());
-                    shapes.get(j).setHeight(firstchild.get(j).getHeight());
-                    shapes.get(j).setLength(firstchild.get(j).getLength());
-                    shapes.get(j).setX(firstchild.get(j).getX());
-                    shapes.get(j).setY(firstchild.get(j).getY());
-                    shapes.get(j).setSelector(firstchild.get(j).getSelector());
-                    shapes.get(j).setThickness(firstchild.get(j).getThickness());
-                    shapes.get(j).setColor(firstchild.get(j).getColor());
-                    
-                    
+                    creation.crossover(firstparent, secondparent, firstchild);
+                    creation.mutation(firstchild);
+                    //  System.out.println("Paitning " + i);
+                    for (int j = 0; j < 6; j++) {
+                        //System.out.println("child1 " + firstchild.get(j).getHeight());
+                        shapes.get(j).setHeight(firstchild.get(j).getHeight());
+                        shapes.get(j).setHeight(firstchild.get(j).getHeight());
+                        shapes.get(j).setLength(firstchild.get(j).getLength());
+                        shapes.get(j).setX(firstchild.get(j).getX());
+                        shapes.get(j).setY(firstchild.get(j).getY());
+                        shapes.get(j).setSelector(firstchild.get(j).getSelector());
+                        shapes.get(j).setThickness(firstchild.get(j).getThickness());
+                        shapes.get(j).setColor(firstchild.get(j).getColor());
 
+                    }
+
+                    second = newpaintings2.get(i).getShapes();
+                    creation.crossover2(firstparent, secondparent, secondchild);
+                    creation.mutation(secondchild);
+                    for (int j = 0; j < 6; j++) {
+                        // System.out.println("child2 " + secondchild.get(j).getHeight());
+                        second.get(j).setHeight(secondchild.get(j).getHeight());
+                        second.get(j).setLength(secondchild.get(j).getLength());
+                        second.get(j).setX(secondchild.get(j).getX());
+                        second.get(j).setY(secondchild.get(j).getY());
+                        second.get(j).setSelector(secondchild.get(j).getSelector());
+                        second.get(j).setThickness(secondchild.get(j).getThickness());
+                        second.get(j).setColor(secondchild.get(j).getColor());
+
+                    }
+
+                    //System.out.println("with garde " + paintings.get(i).getGrades());
                 }
 
-                second = newpaintings2.get(i).getShapes();
-                creation.crossover2(firstparent, secondparent, secondchild);
-                creation.mutation(secondchild);
-                for (int j = 0; j < 6; j++) {
-                    // System.out.println("child2 " + secondchild.get(j).getHeight());
-                    second.get(j).setHeight(secondchild.get(j).getHeight());
-                    second.get(j).setLength(secondchild.get(j).getLength());
-                    second.get(j).setX(secondchild.get(j).getX());
-                    second.get(j).setY(secondchild.get(j).getY());
-                    second.get(j).setSelector(secondchild.get(j).getSelector());
-                    second.get(j).setThickness(secondchild.get(j).getThickness());
-                    second.get(j).setColor(secondchild.get(j).getColor());
-
+                paintings.clear();
+                paintings.addAll(newpaintings.subList(0, limit / 2));
+                paintings.addAll(newpaintings2.subList(0, limit / 2));
+                for (int i = 0; i < 100; i++) {
+                    shapes = paintings.get(i).getShapes();
+                    paintings.get(i).setGrades(creation.fittness(shapes));
                 }
-
-                //System.out.println("with garde " + paintings.get(i).getGrades());
-            }
-
-            paintings.clear();
-            paintings.addAll(newpaintings.subList(0, limit / 2));
-            paintings.addAll(newpaintings2.subList(0, limit / 2));
-            for (int i = 0; i < 100; i++) {
-                shapes = paintings.get(i).getShapes();
-                paintings.get(i).setGrades(creation.fittness(shapes));
-            }
 
 //            for (int i = 0; i < 100; i++) {
 //                second = paintings.get(i).getShapes();
@@ -478,189 +471,192 @@ public class Canvas extends javax.swing.JFrame {
 //                }
 //                System.out.print("\n");
 //            }
-        }
-
-        creation.bubbleSort(paintings);
-        for (int i = 0; i < 100; i++) {
-            second = paintings.get(i).getShapes();
-            System.out.println("gardes " + paintings.get(i).getGrades());
-            System.out.print("Paitning 99  " + i);
-            for (int j = 0; j < 6; j++) {
-                System.out.print(" " + second.get(j).getHeight() + " ");
             }
-            System.out.print("\n");
+
+            creation.bubbleSort(paintings);
+            for (int i = 0; i < 100; i++) {
+                second = paintings.get(i).getShapes();
+                System.out.println("gardes " + paintings.get(i).getGrades());
+                System.out.print("Paitning 99  " + i);
+                for (int j = 0; j < 6; j++) {
+                    System.out.print(" " + second.get(j).getHeight() + " ");
+                }
+                System.out.print("\n");
+            }
+
+            Graphics g = jPanel1.getGraphics();
+            Graphics g1 = jPanel2.getGraphics();
+            Graphics g2 = jPanel3.getGraphics();
+            Graphics g3 = jPanel4.getGraphics();
+            Graphics g4 = jPanel5.getGraphics();
+            Graphics g5 = jPanel6.getGraphics();
+            Graphics2D G1 = (Graphics2D) g;
+            Graphics2D G2 = (Graphics2D) g1;
+            Graphics2D G3 = (Graphics2D) g2;
+            Graphics2D G4 = (Graphics2D) g3;
+            Graphics2D G5 = (Graphics2D) g4;
+            Graphics2D G6 = (Graphics2D) g5;
+            painting = paintings.get(0);
+            shapes = painting.getShapes();
+            second = paintings.get(1).getShapes();
+            third = paintings.get(2).getShapes();
+            forth = paintings.get(3).getShapes();
+            fifth = paintings.get(4).getShapes();
+            sixth = paintings.get(5).getShapes();
+        
+            for (int i = 0; i < 6; i++) {
+                switch (shapes.get(i).getSelector()) {
+                    case 0:
+                        Graphics2D gRect = (Graphics2D) G1.create(); // Create a new Graphics object for each shape
+                        creation.colorCenerator(gRect, shapes.get(i).getColor());
+                        gRect.setStroke(new BasicStroke(shapes.get(i).getThickness()));
+                        gRect.drawRect(shapes.get(i).getX(), shapes.get(i).getY(), shapes.get(i).getHeight(), shapes.get(i).getLength());
+                        gRect.dispose(); // Dispose the Graphics object after drawing the shape
+                        break;
+                    case 1:
+                        Graphics2D gOval = (Graphics2D) G1.create(); // Create a new Graphics object for each shape
+                        creation.colorCenerator(gOval, shapes.get(i).getColor());
+                        gOval.setStroke(new BasicStroke(shapes.get(i).getThickness()));
+                        gOval.drawOval(shapes.get(i).getX(), shapes.get(i).getY(), shapes.get(i).getHeight(), shapes.get(i).getLength());
+                        
+                        gOval.dispose(); // Dispose the Graphics object after drawing the shape
+                        break;
+                    case 2:
+                        Graphics2D gTriangle = (Graphics2D) G1.create(); // Create a new Graphics object for each shape
+                        creation.colorCenerator(gTriangle, shapes.get(i).getColor());
+                        gTriangle.setStroke(new BasicStroke(shapes.get(i).getThickness()));
+                        triangle.drawTraingle(gTriangle, shapes.get(i).getX(), shapes.get(i).getY(), shapes.get(i).getHeight(), shapes.get(i).getLength());
+                        gTriangle.dispose(); // Dispose the Graphics object after drawing the shape
+                        break;
+                }
+            }
+            for (int i = 0; i < 6; i++) {
+                switch (second.get(i).getSelector()) {
+                    case 0:
+                        Graphics2D gRect = (Graphics2D) G2.create();
+                        gRect.setStroke(new BasicStroke(second.get(i).getThickness()));
+                        creation.colorCenerator(gRect, second.get(i).getColor());
+                        gRect.drawRect(second.get(i).getX(), second.get(i).getY(), second.get(i).getHeight(), second.get(i).getLength());
+                        gRect.dispose();
+                        break;
+                    case 1:
+                        Graphics2D gOval = (Graphics2D) G2.create();
+                        gOval.setStroke(new BasicStroke(second.get(i).getThickness()));
+                        creation.colorCenerator(gOval, second.get(i).getColor());
+                        gOval.drawOval(second.get(i).getX(), second.get(i).getY(), second.get(i).getHeight(), second.get(i).getLength());
+                        gOval.dispose();
+                        break;
+                    case 2:
+                        Graphics2D gTriangle = (Graphics2D) G2.create();
+                        gTriangle.setStroke(new BasicStroke(second.get(i).getThickness()));
+                        creation.colorCenerator(gTriangle, second.get(i).getColor());
+                        triangle.drawTraingle(gTriangle, second.get(i).getX(), second.get(i).getY(), second.get(i).getHeight(), second.get(i).getLength());
+                        gTriangle.dispose();
+                        break;
+                }
+            }
+            for (int i = 0; i < 6; i++) {
+                switch (third.get(i).getSelector()) {
+                    case 0:
+                        Graphics2D gRect = (Graphics2D) G3.create();
+                        gRect.setStroke(new BasicStroke(third.get(i).getThickness()));
+                        creation.colorCenerator(gRect, third.get(i).getColor());
+                        gRect.drawRect(third.get(i).getX(), third.get(i).getY(), third.get(i).getHeight(), third.get(i).getLength());
+                        gRect.dispose();
+                        break;
+                    case 1:
+                        Graphics2D gOval = (Graphics2D) G3.create();
+                        gOval.setStroke(new BasicStroke(third.get(i).getThickness()));
+                        creation.colorCenerator(gOval, third.get(i).getColor());
+                        gOval.drawOval(third.get(i).getX(), third.get(i).getY(), third.get(i).getHeight(), third.get(i).getLength());
+                        gOval.dispose();
+                        break;
+                    case 2:
+                        Graphics2D gTriangle = (Graphics2D) G3.create();
+                        gTriangle.setStroke(new BasicStroke(third.get(i).getThickness()));
+                        creation.colorCenerator(gTriangle, third.get(i).getColor());
+                        triangle.drawTraingle(gTriangle, third.get(i).getX(), third.get(i).getY(), third.get(i).getHeight(), third.get(i).getLength());
+                        gTriangle.dispose();
+                        break;
+                }
+            }
+            for (int i = 0; i < 6; i++) {
+                switch (forth.get(i).getSelector()) {
+                    case 0:
+                        Graphics2D gRect = (Graphics2D) G4.create();
+                        gRect.setStroke(new BasicStroke(forth.get(i).getThickness()));
+                        creation.colorCenerator(gRect, forth.get(i).getColor());
+                        gRect.drawRect(forth.get(i).getX(), forth.get(i).getY(), forth.get(i).getHeight(), forth.get(i).getLength());
+                        gRect.dispose();
+                        break;
+                    case 1:
+                        Graphics2D gOval = (Graphics2D) G4.create();
+                        gOval.setStroke(new BasicStroke(forth.get(i).getThickness()));
+                        creation.colorCenerator(gOval, forth.get(i).getColor());
+                        gOval.drawOval(forth.get(i).getX(), forth.get(i).getY(), forth.get(i).getHeight(), forth.get(i).getLength());
+                        gOval.dispose();
+                        break;
+                    case 2:
+                        Graphics2D gTriangle = (Graphics2D) G4.create();
+                        gTriangle.setStroke(new BasicStroke(forth.get(i).getThickness()));
+                        creation.colorCenerator(gTriangle, forth.get(i).getColor());
+                        triangle.drawTraingle(gTriangle, forth.get(i).getX(), forth.get(i).getY(), forth.get(i).getHeight(), forth.get(i).getLength());
+                        gTriangle.dispose();
+                        break;
+                }
+            }
+            for (int i = 0; i < 6; i++) {
+                switch (fifth.get(i).getSelector()) {
+                    case 0:
+                        Graphics2D gRect = (Graphics2D) G5.create();
+                        gRect.setStroke(new BasicStroke(fifth.get(i).getThickness()));
+                        creation.colorCenerator(gRect, fifth.get(i).getColor());
+                        gRect.drawRect(fifth.get(i).getX(), fifth.get(i).getY(), fifth.get(i).getHeight(), fifth.get(i).getLength());
+                        gRect.dispose();
+                        break;
+                    case 1:
+                        Graphics2D gOval = (Graphics2D) G5.create();
+                        gOval.setStroke(new BasicStroke(fifth.get(i).getThickness()));
+                        creation.colorCenerator(gOval, fifth.get(i).getColor());
+                        gOval.drawOval(fifth.get(i).getX(), fifth.get(i).getY(), fifth.get(i).getHeight(), fifth.get(i).getLength());
+                        gOval.dispose();
+                        break;
+                    case 2:
+                        Graphics2D gTriangle = (Graphics2D) G5.create();
+                        gTriangle.setStroke(new BasicStroke(fifth.get(i).getThickness()));
+                        creation.colorCenerator(gTriangle, fifth.get(i).getColor());
+                        triangle.drawTraingle(gTriangle, fifth.get(i).getX(), fifth.get(i).getY(), fifth.get(i).getHeight(), fifth.get(i).getLength());
+                        gTriangle.dispose();
+                        break;
+                }
+            }
+            for (int i = 0; i < 6; i++) {
+                switch (sixth.get(i).getSelector()) {
+                    case 0:
+                        Graphics2D gRect = (Graphics2D) G6.create();
+                        gRect.setStroke(new BasicStroke(sixth.get(i).getThickness()));
+                        creation.colorCenerator(gRect, sixth.get(i).getColor());
+                        gRect.drawRect(sixth.get(i).getX(), sixth.get(i).getY(), sixth.get(i).getHeight(), sixth.get(i).getLength());
+                        gRect.dispose();
+                        break;
+                    case 1:
+                        Graphics2D gOval = (Graphics2D) G6.create();
+                        gOval.setStroke(new BasicStroke(sixth.get(i).getThickness()));
+                        creation.colorCenerator(gOval, sixth.get(i).getColor());
+                        gOval.drawOval(sixth.get(i).getX(), sixth.get(i).getY(), sixth.get(i).getHeight(), sixth.get(i).getLength());
+                        gOval.dispose();
+                        break;
+                    case 2:
+                        Graphics2D gTriangle = (Graphics2D) G6.create();
+                        gTriangle.setStroke(new BasicStroke(sixth.get(i).getThickness()));
+                        creation.colorCenerator(gTriangle, sixth.get(i).getColor());
+                        triangle.drawTraingle(gTriangle, sixth.get(i).getX(), sixth.get(i).getY(), sixth.get(i).getHeight(), sixth.get(i).getLength());
+                        gTriangle.dispose();
+                        break;
+                }
+            }
         }
 
-        Graphics g = jPanel1.getGraphics();
-        Graphics g1 = jPanel2.getGraphics();
-        Graphics g2 = jPanel3.getGraphics();
-        Graphics g3 = jPanel4.getGraphics();
-        Graphics g4 = jPanel5.getGraphics();
-        Graphics g5 = jPanel6.getGraphics();
-        Graphics2D G1 = (Graphics2D) g;
-        Graphics2D G2 = (Graphics2D) g1;
-        Graphics2D G3 = (Graphics2D) g2;
-        Graphics2D G4 = (Graphics2D) g3;
-        Graphics2D G5 = (Graphics2D) g4;
-        Graphics2D G6 = (Graphics2D) g5;
-        painting = paintings.get(0);
-        shapes = painting.getShapes();
-        second = paintings.get(1).getShapes();
-        third = paintings.get(2).getShapes();
-        forth = paintings.get(3).getShapes();
-        fifth = paintings.get(4).getShapes();
-        sixth = paintings.get(5).getShapes();
-       for (int i = 0; i < 6; i++) {
-    switch (shapes.get(i).getSelector()) {
-        case 0:
-            Graphics2D gRect = (Graphics2D)G1.create(); // Create a new Graphics object for each shape
-            creation.colorCenerator(gRect, shapes.get(i).getColor());
-            gRect.setStroke(new BasicStroke(shapes.get(i).getThickness()));
-            gRect.drawRect(shapes.get(i).getX(), shapes.get(i).getY(), shapes.get(i).getHeight(), shapes.get(i).getLength());
-            gRect.dispose(); // Dispose the Graphics object after drawing the shape
-            break;
-        case 1:
-            Graphics2D gOval = (Graphics2D)G1.create(); // Create a new Graphics object for each shape
-            creation.colorCenerator(gOval, shapes.get(i).getColor());
-            gOval.setStroke(new BasicStroke(shapes.get(i).getThickness()));
-            gOval.drawOval(shapes.get(i).getX(), shapes.get(i).getY(), shapes.get(i).getHeight(), shapes.get(i).getLength());
-            gOval.dispose(); // Dispose the Graphics object after drawing the shape
-            break;
-        case 2:
-            Graphics2D gTriangle = (Graphics2D)G1.create(); // Create a new Graphics object for each shape
-            creation.colorCenerator(gTriangle, shapes.get(i).getColor());
-            gTriangle.setStroke(new BasicStroke(shapes.get(i).getThickness()));
-            triangle.drawTraingle(gTriangle, shapes.get(i).getX(), shapes.get(i).getY(), shapes.get(i).getHeight(), shapes.get(i).getLength());
-            gTriangle.dispose(); // Dispose the Graphics object after drawing the shape
-            break;
-    }
-       }
-        for (int i = 0; i < 6; i++) {
-    switch (second.get(i).getSelector()) {
-        case 0:
-            Graphics2D gRect = (Graphics2D) G2.create();
-            gRect.setStroke(new BasicStroke(second.get(i).getThickness()));
-            creation.colorCenerator(gRect, second.get(i).getColor());
-            gRect.drawRect(second.get(i).getX(), second.get(i).getY(), second.get(i).getHeight(), second.get(i).getLength());
-            gRect.dispose();
-            break;
-        case 1:
-            Graphics2D gOval = (Graphics2D) G2.create();
-            gOval.setStroke(new BasicStroke(second.get(i).getThickness()));
-            creation.colorCenerator(gOval, second.get(i).getColor());
-            gOval.drawOval(second.get(i).getX(), second.get(i).getY(), second.get(i).getHeight(), second.get(i).getLength());
-            gOval.dispose();
-            break;
-        case 2:
-            Graphics2D gTriangle = (Graphics2D) G2.create();
-            gTriangle.setStroke(new BasicStroke(second.get(i).getThickness()));
-            creation.colorCenerator(gTriangle, second.get(i).getColor());
-            triangle.drawTraingle(gTriangle, second.get(i).getX(), second.get(i).getY(), second.get(i).getHeight(), second.get(i).getLength());
-            gTriangle.dispose();
-            break;
-    }
-}
-       for (int i = 0; i < 6; i++) {
-    switch (third.get(i).getSelector()) {
-        case 0:
-            Graphics2D gRect = (Graphics2D) G3.create();
-            gRect.setStroke(new BasicStroke(third.get(i).getThickness()));
-            creation.colorCenerator(gRect, third.get(i).getColor());
-            gRect.drawRect(third.get(i).getX(), third.get(i).getY(), third.get(i).getHeight(), third.get(i).getLength());
-            gRect.dispose();
-            break;
-        case 1:
-            Graphics2D gOval = (Graphics2D) G3.create();
-            gOval.setStroke(new BasicStroke(third.get(i).getThickness()));
-            creation.colorCenerator(gOval, third.get(i).getColor());
-            gOval.drawOval(third.get(i).getX(), third.get(i).getY(), third.get(i).getHeight(), third.get(i).getLength());
-            gOval.dispose();
-            break;
-        case 2:
-            Graphics2D gTriangle = (Graphics2D) G3.create();
-            gTriangle.setStroke(new BasicStroke(third.get(i).getThickness()));
-            creation.colorCenerator(gTriangle, third.get(i).getColor());
-            triangle.drawTraingle(gTriangle, third.get(i).getX(), third.get(i).getY(), third.get(i).getHeight(), third.get(i).getLength());
-            gTriangle.dispose();
-            break;
-    }
-}
-       for (int i = 0; i < 6; i++) {
-    switch (forth.get(i).getSelector()) {
-        case 0:
-            Graphics2D gRect = (Graphics2D) G4.create();
-            gRect.setStroke(new BasicStroke(forth.get(i).getThickness()));
-            creation.colorCenerator(gRect, forth.get(i).getColor());
-            gRect.drawRect(forth.get(i).getX(), forth.get(i).getY(), forth.get(i).getHeight(), forth.get(i).getLength());
-            gRect.dispose();
-            break;
-        case 1:
-            Graphics2D gOval = (Graphics2D) G4.create();
-            gOval.setStroke(new BasicStroke(forth.get(i).getThickness()));
-            creation.colorCenerator(gOval, forth.get(i).getColor());
-            gOval.drawOval(forth.get(i).getX(), forth.get(i).getY(), forth.get(i).getHeight(), forth.get(i).getLength());
-            gOval.dispose();
-            break;
-        case 2:
-            Graphics2D gTriangle = (Graphics2D) G4.create();
-            gTriangle.setStroke(new BasicStroke(forth.get(i).getThickness()));
-            creation.colorCenerator(gTriangle, forth.get(i).getColor());
-            triangle.drawTraingle(gTriangle, forth.get(i).getX(), forth.get(i).getY(), forth.get(i).getHeight(), forth.get(i).getLength());
-            gTriangle.dispose();
-            break;
-    }
-}
-        for (int i = 0; i < 6; i++) {
-    switch (fifth.get(i).getSelector()) {
-        case 0:
-            Graphics2D gRect = (Graphics2D) G5.create();
-            gRect.setStroke(new BasicStroke(fifth.get(i).getThickness()));
-           creation.colorCenerator(gRect, fifth.get(i).getColor());
-            gRect.drawRect(fifth.get(i).getX(), fifth.get(i).getY(), fifth.get(i).getHeight(), fifth.get(i).getLength());
-            gRect.dispose();
-            break;
-        case 1:
-            Graphics2D gOval = (Graphics2D) G5.create();
-            gOval.setStroke(new BasicStroke(fifth.get(i).getThickness()));
-          creation.colorCenerator(gOval, fifth.get(i).getColor());
-            gOval.drawOval(fifth.get(i).getX(), fifth.get(i).getY(), fifth.get(i).getHeight(), fifth.get(i).getLength());
-            gOval.dispose();
-            break;
-        case 2:
-            Graphics2D gTriangle = (Graphics2D) G5.create();
-            gTriangle.setStroke(new BasicStroke(fifth.get(i).getThickness()));
-            creation.colorCenerator(gTriangle, fifth.get(i).getColor());
-            triangle.drawTraingle(gTriangle, fifth.get(i).getX(), fifth.get(i).getY(), fifth.get(i).getHeight(), fifth.get(i).getLength());
-            gTriangle.dispose();
-            break;
-    }
-}
-        for (int i = 0; i < 6; i++) {
-    switch (sixth.get(i).getSelector()) {
-        case 0:
-            Graphics2D gRect = (Graphics2D) G6.create();
-            gRect.setStroke(new BasicStroke(sixth.get(i).getThickness()));
-            creation.colorCenerator(gRect, sixth.get(i).getColor());
-            gRect.drawRect(sixth.get(i).getX(), sixth.get(i).getY(), sixth.get(i).getHeight(), sixth.get(i).getLength());
-            gRect.dispose();
-            break;
-        case 1:
-            Graphics2D gOval = (Graphics2D)  G6.create();
-            gOval.setStroke(new BasicStroke(sixth.get(i).getThickness()));
-            creation.colorCenerator(gOval, sixth.get(i).getColor());
-            gOval.drawOval(sixth.get(i).getX(), sixth.get(i).getY(), sixth.get(i).getHeight(), sixth.get(i).getLength());
-            gOval.dispose();
-            break;
-        case 2:
-            Graphics2D gTriangle = (Graphics2D)  G6.create();
-            gTriangle.setStroke(new BasicStroke(sixth.get(i).getThickness()));
-            creation.colorCenerator(gTriangle, sixth.get(i).getColor());
-            triangle.drawTraingle(gTriangle, sixth.get(i).getX(), sixth.get(i).getY(), sixth.get(i).getHeight(), sixth.get(i).getLength());
-            gTriangle.dispose();
-            break;
-    }
-}
-        }
 
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -743,7 +739,7 @@ public class Canvas extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-         Graphics g = jPanel1.getGraphics();
+        Graphics g = jPanel1.getGraphics();
         Graphics g1 = jPanel2.getGraphics();
         Graphics g2 = jPanel3.getGraphics();
         Graphics g3 = jPanel4.getGraphics();
@@ -755,36 +751,98 @@ public class Canvas extends javax.swing.JFrame {
         int cellWidth = panelWidth / 3;
         int cellHeight = panelHeight / 3;
 
-        g.setColor(Color.red);
+double x1 = cellWidth*2;
+double y1 = 0;
+double x2 = cellWidth*2;
+double y2 = panelHeight;
+double x3 = 0;
+double y3 = cellHeight;
+double x4 = panelWidth;
+double y4 = cellHeight;
+Shape_method intersection=new  Shape_method();
+intersection.intersetcion(x1, y1, x2, y2, x3, y3, x4, y4);
+        g.setColor(Color.white);
+        g.fillOval(100 - 8 / 2, 71 - 8 / 2, 8 ,8);
+        g.fillOval(100 - 8 / 2, 142 - 8 / 2, 8 ,8);
+        g.fillOval(200 - 8 / 2, 71 - 8 / 2, 8 ,8);
+        g.fillOval(200 - 8 / 2,    142 - 8 / 2, 8 ,8);
         g.drawLine(cellWidth, 0, cellWidth, panelHeight);
         g.drawLine(cellWidth * 2, 0, cellWidth * 2, panelHeight);
         g.drawLine(0, cellHeight, panelWidth, cellHeight);
         g.drawLine(0, cellHeight * 2, panelWidth, cellHeight * 2);
 
+        g1.setColor(Color.white);
+        g1.fillOval(100 - 8 / 2, 71 - 8 / 2, 8 ,8);
+        g1.fillOval(100 - 8 / 2, 142 - 8 / 2, 8 ,8);
+        g1.fillOval(200 - 8 / 2, 71 - 8 / 2, 8 ,8);
+        g1.fillOval(200 - 8 / 2,    142 - 8 / 2, 8 ,8);
         g1.drawLine(cellWidth, 0, cellWidth, panelHeight);
         g1.drawLine(cellWidth * 2, 0, cellWidth * 2, panelHeight);
         g1.drawLine(0, cellHeight, panelWidth, cellHeight);
         g1.drawLine(0, cellHeight * 2, panelWidth, cellHeight * 2);
-
+        g2.setColor(Color.white);
+        g2.fillOval(100 - 8 / 2, 71 - 8 / 2, 8 ,8);
+        g2.fillOval(100 - 8 / 2, 142 - 8 / 2, 8 ,8);
+        g2.fillOval(200 - 8 / 2, 71 - 8 / 2, 8 ,8);
+        g2.fillOval(200 - 8 / 2,    142- 8 / 2, 8 ,8);
         g2.drawLine(cellWidth, 0, cellWidth, panelHeight);
         g2.drawLine(cellWidth * 2, 0, cellWidth * 2, panelHeight);
         g2.drawLine(0, cellHeight, panelWidth, cellHeight);
         g2.drawLine(0, cellHeight * 2, panelWidth, cellHeight * 2);
-
+        g3.setColor(Color.white);
+        g3.fillOval(100 - 8 / 2, 71- 8 / 2, 8 ,8);
+        g3.fillOval(100 - 8 / 2, 142 - 8 / 2, 8 ,8);
+        g3.fillOval(200 - 8 / 2, 71 - 8 / 2, 8 ,8);
+        g3.fillOval(200 - 8 / 2,    142 - 8 / 2, 8 ,8);
         g3.drawLine(cellWidth, 0, cellWidth, panelHeight);
         g3.drawLine(cellWidth * 2, 0, cellWidth * 2, panelHeight);
         g3.drawLine(0, cellHeight, panelWidth, cellHeight);
         g3.drawLine(0, cellHeight * 2, panelWidth, cellHeight * 2);
-
+        g4.setColor(Color.white);
+        g4.fillOval(100 - 8 / 2, 71 - 8 / 2, 8 ,8);
+        g4.fillOval(100 - 8 / 2, 142 - 8 / 2, 8 ,8);
+        g4.fillOval(200 - 8 / 2, 71 - 8 / 2, 8 ,8);
+        g4.fillOval(200 - 8 / 2,    142 - 8 / 2, 8 ,8);
         g4.drawLine(cellWidth, 0, cellWidth, panelHeight);
         g4.drawLine(cellWidth * 2, 0, cellWidth * 2, panelHeight);
         g4.drawLine(0, cellHeight, panelWidth, cellHeight);
         g4.drawLine(0, cellHeight * 2, panelWidth, cellHeight * 2);
-
+        g5.setColor(Color.white);
+        g5.fillOval(100 - 8 / 2, 71 - 8 / 2, 8 ,8);
+        g5.fillOval(100 - 8 / 2, 142 - 8 / 2, 8 ,8);
+        g5.fillOval(200 - 8 / 2, 71 - 8 / 2, 8 ,8);
+        g5.fillOval(200 - 8 / 2, 142- 8 / 2, 8 ,8);
         g5.drawLine(cellWidth, 0, cellWidth, panelHeight);
         g5.drawLine(cellWidth * 2, 0, cellWidth * 2, panelHeight);
         g5.drawLine(0, cellHeight, panelWidth, cellHeight);
         g5.drawLine(0, cellHeight * 2, panelWidth, cellHeight * 2);
+        
+        
+          int centerofGravityX=shapes.get(5).getX()+shapes.get(5).getHeight()/2;
+          int centerofGravityY=shapes.get(5).getY()+shapes.get(5).getLength()/2;
+          g.setColor(Color.red);
+          g.fillOval(centerofGravityX - 8 / 2, centerofGravityY - 8 / 2, 8, 8);
+          
+          centerofGravityX=second.get(5).getX()+second.get(5).getHeight()/2;
+          centerofGravityY=second.get(5).getY()+second.get(5).getLength()/2;
+          g1.setColor(Color.red);
+          g1.fillOval(centerofGravityX - 8 / 2, centerofGravityY - 8 / 2, 8, 8);
+          centerofGravityX=third.get(5).getX()+third.get(5).getHeight()/2;
+          centerofGravityY=third.get(5).getY()+third.get(5).getLength()/2;
+          g2.setColor(Color.red);
+          g2.fillOval(centerofGravityX - 8 / 2, centerofGravityY - 8 / 2, 8, 8);
+          centerofGravityX=forth.get(5).getX()+forth.get(5).getHeight()/2;
+          centerofGravityY=forth.get(5).getY()+forth.get(5).getLength()/2;
+          g3.setColor(Color.red);
+          g3.fillOval(centerofGravityX - 8 / 2, centerofGravityY - 8 / 2, 8, 8);
+          centerofGravityX=fifth.get(5).getX()+fifth.get(5).getHeight()/2;
+          centerofGravityY=fifth.get(5).getY()+fifth.get(5).getLength()/2;
+          g4.setColor(Color.red);
+          g4.fillOval(centerofGravityX - 8 / 2, centerofGravityY - 8 / 2, 8, 8);
+          centerofGravityX=sixth.get(5).getX()+sixth.get(5).getHeight()/2;
+          centerofGravityY=sixth.get(5).getY()+sixth.get(5).getLength()/2;
+          g5.setColor(Color.red);
+          g5.fillOval(centerofGravityX - 8 / 2, centerofGravityY - 8 / 2, 8, 8);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
