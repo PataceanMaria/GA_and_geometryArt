@@ -6,6 +6,8 @@
 package geometricarti_better;
 
 import java.awt.Graphics;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import javax.swing.JPanel;
 
@@ -64,4 +66,29 @@ public class Shape_method extends JPanel {
         System.out.println("Intersection point (x, y): (" + x + ", " + y + ")");
 
     }
+    
+    public double calculateMean(ArrayList<Painting> paintings) {
+        double sum = 0;
+        for (int i=0;i<100;i++) {
+            sum += paintings.get(i).getGrades();
+        }
+        return sum / 100;
+    }
+    
+     public double calculateStandardDeviation(ArrayList<Painting> paintings) {
+        double mean = calculateMean(paintings);
+        double sumSquaredDiff = 0;
+        for (int i=0;i<100;i++) {
+            double diff = paintings.get(i).getGrades() - mean;
+            sumSquaredDiff += diff * diff;
+        }
+        return Math.sqrt(sumSquaredDiff / 100);
+    }
+     public double gaussian(double x, double mean, double amplitude, double standardDeviation) {
+        double exponent = -(Math.pow(x - mean, 2) / (2 * Math.pow(standardDeviation, 2)));
+        return amplitude * Math.exp(exponent);
+    }
+
+    
+    
 }

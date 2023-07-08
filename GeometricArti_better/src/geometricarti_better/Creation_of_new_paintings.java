@@ -81,7 +81,7 @@ public class Creation_of_new_paintings extends JPanel {
                 child.get(shape).setSelector(rand.nextInt(3));
                 break;
             case 5:
-                child.get(shape).setThickness(rand.nextFloat()+2.0f);
+                child.get(shape).setThickness(rand.nextFloat()+10.0f);
                 break;
             case 6:
                 child.get(shape).setColor(rand.nextInt(8));
@@ -145,13 +145,13 @@ public class Creation_of_new_paintings extends JPanel {
             double reversedGravityY=individualGravityY-centerofGravityY;
             
             
-            if(shapes.get(5).getThickness()>shapes.get(i).getThickness())
-                grade++;
+            if(shapes.get(5).getThickness()>shapes.get(i).getThickness()*2)
+                grade=grade+10;
             else
-                if(grade==0)
+                if(grade>=10)
+                    grade=grade-10;
+            else if(grade<=10)
                     grade=0;
-            else
-                    grade--;
             
             if(shapes.get(5).getHeight()<shapes.get(i).getHeight()&&shapes.get(5).getLength()<shapes.get(i).getLength())
             {
@@ -182,7 +182,7 @@ public class Creation_of_new_paintings extends JPanel {
             
         if(k==1&&shapes.get(5).getColor()==7&&k2==0&&k3==0)
             grade=grade+5;
-        if(k2==1&&shapes.get(5).getColor()==5&&k==0&&k3==0)
+        else if(k2==1&&shapes.get(5).getColor()==5&&k==0&&k3==0)
             grade=grade+5;
         else if(k3==1&&shapes.get(5).getColor()==3&&k2==0&&k==0)
             grade=grade+5;
@@ -196,10 +196,9 @@ public class Creation_of_new_paintings extends JPanel {
 //                    grade=grade+3;
 //                else if(centerofGravityX-85<=1&&centerofGravityY-53<=1||85-centerofGravityX<=1&&53-centerofGravityY<=1)
 //                    grade=grade+5;
-                if(centerofGravityX-85<=1&&centerofGravityY-53<=1||85-centerofGravityX<=1&&53-centerofGravityY<=1)
+                if(centerofGravityX-85<=5&&centerofGravityY-53<=5||85-centerofGravityX<=5&&53-centerofGravityY<=5)
                     grade=grade+10;
-               else if(centerofGravityX-85<=0.5&&centerofGravityY-53<=0.5||85-centerofGravityX<=0.5&&53-centerofGravityY<=0.5)
-                    grade=grade+15;
+             
                 else if(centerofGravityX-85==0&&centerofGravityY-53==0||85-centerofGravityX==0&&53-centerofGravityY==0)
                     grade=grade+20;
 //                else if(centerofGravityX-85<=5&&centerofGravityY-106<=5||85-centerofGravityX<=5&&106-centerofGravityY<=5)
@@ -208,10 +207,9 @@ public class Creation_of_new_paintings extends JPanel {
 //                    grade=grade+3;
 //                else if(centerofGravityX-85<=1&&centerofGravityY-106<=1||85-centerofGravityX<=1&&106-centerofGravityY<=1)
 //                    grade=grade+5;
-                else if(centerofGravityX-85<=1&&centerofGravityY-106<=1||85-centerofGravityX<=1&&106-centerofGravityY<=1)
+                else if(centerofGravityX-85<=5&&centerofGravityY-106<=5||85-centerofGravityX<=5&&106-centerofGravityY<=5)
                     grade=grade+10;
-                else if(centerofGravityX-85<=0.5&&centerofGravityY-106<=0.5||85-centerofGravityX<=0.5&&106-centerofGravityY<=0.5)
-                    grade=grade+15;
+                
                  else if(centerofGravityX-85==0&&centerofGravityY-106==0||85-centerofGravityX==0&&106-centerofGravityY==0)
                     grade=grade+20;
                 
@@ -221,10 +219,9 @@ public class Creation_of_new_paintings extends JPanel {
 //                    grade=grade+3;
 //                else if(centerofGravityX-170<=1&&centerofGravityY-53<=1||170-centerofGravityX<=1&&53-centerofGravityY<=1)
 //                    grade=grade+5;
-                else if(centerofGravityX-170<=1&&centerofGravityY-53<=1||170-centerofGravityX<=1&&53-centerofGravityY<=1)
+                else if(centerofGravityX-170<=5&&centerofGravityY-53<=5||170-centerofGravityX<=5&&53-centerofGravityY<=5)
                     grade=grade+10;
-                 else if(centerofGravityX-170<=0.5&&centerofGravityY-53<=0.5||170-centerofGravityX<=0.5&&53-centerofGravityY<=0.5)
-                    grade=grade+15;
+                 
                  else if(centerofGravityX-170==0&&centerofGravityY-53==0||170-centerofGravityX==0&&53-centerofGravityY==0)
                     grade=grade+20;
 //                 else if(centerofGravityX-170<=5&&centerofGravityY-106<=5||170-centerofGravityX<=5&&106-centerofGravityY<=5)
@@ -233,10 +230,9 @@ public class Creation_of_new_paintings extends JPanel {
 //                    grade=grade+3;
 //                else if(centerofGravityX-170<=1&&centerofGravityY-106<=1||170-centerofGravityX<=1&&106-centerofGravityY<=1)
 //                    grade=grade+5;
-                else if(centerofGravityX-170<=1&&centerofGravityY-106<=1||170-centerofGravityX<=1&&106-centerofGravityY<=1)
+                else if(centerofGravityX-170<=5&&centerofGravityY-106<=5||170-centerofGravityX<=5&&106-centerofGravityY<=5)
                     grade=grade+10;
-                else if(centerofGravityX-170<=0.5&&centerofGravityY-106<=0.5||170-centerofGravityX<=0.5&&106-centerofGravityY<=0.5)
-                    grade=grade+15;
+                
                 else if(centerofGravityX-170==0&&centerofGravityY-106==0||170-centerofGravityX==0&&106-centerofGravityY==0)
                     grade=grade+20;
                 else grade=grade-grade;

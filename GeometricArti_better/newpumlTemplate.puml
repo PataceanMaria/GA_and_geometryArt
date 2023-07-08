@@ -1,0 +1,133 @@
+
+@startuml
+class Canvas {
+ painting:Painting
+ shapes:ArrayList<Individual>
+ second:ArrayList<Individual>
+third:ArrayList<Individual>
+ forth:ArrayList<Individual>
+fifth:ArrayList<Individual>
+sixth:ArrayList<Individual>
+ firstparent:ArrayList<Individual>
+ secondparent:ArrayList<Individual>
+ firstchild:ArrayList<Individual>
+ secondchild :ArrayList<Individual>
+  shape:Individual
+  paintings:ArrayList<Painting>
+newpaintings:ArrayList<Painting>
+ newpaintings2:ArrayList<Painting>
+ newgeneration:ArrayList<Painting>
+ random :Random
+    grades:int
+    triangle:Shape_method
+   Creation:Creation_of_new_painting
+ jButton1:JButton
+    jButton2:JButton
+    jButton3:JButton
+    jButton4:JButton
+   jButton5:JButton
+    jCheckBox1: JCheckBox 
+   jCheckBox2: JCheckBox 
+   jCheckBox3: JCheckBox 
+    jCheckBox4: JCheckBox 
+   jCheckBox5: JCheckBox 
+   jCheckBox6: JCheckBox 
+     jPanel1:JPanel
+    jPanel2:JPanel
+    jPanel3:JPanel
+     jPanel4:JPanel
+  jPanel5:JPanel
+     jPanel6:JPanel
+jButton1ActionPerformed():void
+jButton2ActionPerformed():void
+jButton3ActionPerformed():void
+jButton4ActionPerformed():void
+jButton5ActionPerformed():void
+jCheckBox1ActionPerformed():void
+jCheckBox2ActionPerformed():void
+jCheckBox3ActionPerformed():void
+jCheckBox4ActionPerformed():void
+jCheckBox5ActionPerformed():void
+jCheckBox6ActionPerformed():void
+
+}
+class Creation_of_new_painting
+{
+
+  rand:Random
+  position:int
+  shape:int
+crossover(ArrayList<Individual> firstparent, ArrayList<Individual> secondparent, ArrayList<Individual> child):void
+crossover2(ArrayList<Individual> firstparent, ArrayList<Individual> secondparent, ArrayList<Individual> child):void
+selection(ArrayList<Painting> paintings): ArrayList<Individual>
+bestindex:int
+max:int
+mutation(ArrayList<Individual> child):void
+fitness(ArrayList<Individual> shapes):int
+garde:int
+k:int
+k2:int
+centerofGravityX:double
+centerofGravtyY:double
+colorGenerator(Graphics g, int color):void
+bubbleSort(ArrayList<Painting> paintings):void
+
+}
+class Individual
+{
+
+height:int
+length:int
+x:int
+y:int
+selector:int 
+color:int
+thickness:float
+getHeight():int
+getLength():int
+getX():int
+getY():int
+getSelector():int
+getColor():int
+getThickness():float
+setHeight(int height):void
+setLength(int length):void
+setX(int x):void
+setY(int y):void
+setSelector(int selector):void
+setColor(int color):void
+setThickness(float thickness):void
+
+
+}
+class Painting
+{
+random:Random
+shapes:ArrayList<Individual>
+grades:int
+getShapes():ArrayList<Individual>
+setShapes(ArrayList<Individual>shapes):ArrayList<Individual>
+getGrades():int
+setGrades(int: grades):int
+}
+class Shape_method
+{
+
+height:int
+lenght:int
+x:int
+y:int
+height2 :int
+lenght2 :int
+x2 :int
+y2 :int
+drawTriangle(Graphics :g, int :x, y, width, height):void
+intersection(double: x1, y1,  x2,  y2,  x3,  y3, x4, y4):void
+}
+Shape_method--|>Canvas
+Individual--|>Painting
+Painting--|>Canvas
+Creation_of_new_painting--|>Canvas
+@enduml
+
+
